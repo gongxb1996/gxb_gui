@@ -1,0 +1,1878 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Storage>
+  <Project Version="8.1" />
+  <Addins>
+    <addin-list valType="String">[Ansys.ParameterManager.ParameterManagerAddin, Ansys.CFX.CFDPost.CFDPostAddin, Ansys.CFX.CFXCore.CFXCoreAddin, Ansys.TurboSystem.TSBase.TSBaseAddin]</addin-list>
+    <Addin Name="Ansys.ParameterManager.ParameterManagerAddin" Version="7.0" />
+    <Addin Name="Ansys.CFX.CFDPost.CFDPostAddin" Version="17.0.0.0" />
+    <Addin Name="Ansys.CFX.CFXCore.CFXCoreAddin" Version="17.0.2.0" />
+    <Addin Name="Ansys.TurboSystem.TSBase.TSBaseAddin" Version="18.0.0.0" />
+  </Addins>
+  <Containers>
+    <container-map valType="String">{"Scopes": Ansys.ParameterManager.ParameterManagerAddin:scopes, "Blade Design": "Ansys.TurboSystem.TSBase.TSBaseAddin:TS Geometry", "Turbo Mesh": "Ansys.TurboSystem.TSBase.TSBaseAddin:TS Mesh", "Setup": Ansys.CFX.CFXCore.CFXCoreAddin:CFXSetupContainer, "Solution": Ansys.CFX.CFXCore.CFXCoreAddin:CFXSolutionContainer, "Results": Ansys.CFX.CFDPost.CFDPostAddin:CFDAnalysisContainer}</container-map>
+    <static-container-ids valType="String">{"Scopes": Scopes}</static-container-ids>
+    <Container Name="Scopes" Version="1.0">
+      <container-type valType="String">Ansys.ParameterManager.ParameterManagerAddin:scopes</container-type>
+      <static-id valType="String">Scopes</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1418, "Input": 1419, "Output": 1418}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{}</last-update-regen-times>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/Scopes/GlobalScope:GlobalScope" Version="1.0">
+        <class-type valType="String">GlobalScope</class-type>
+        <object-name valType="String">GlobalScope</object-name>
+        <member-data valType="String">{"DisplayText": "GlobalScope", "_fieldExpressionValidationContext": None, "functionProviders": [], "Parent": None}</member-data>
+      </Object>
+    </Container>
+    <Container Name="Blade Design" Version="1.0">
+      <container-type valType="String">Ansys.TurboSystem.TSBase.TSBaseAddin:TS Geometry</container-type>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">2170</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1907, "Input": 2169, "Output": 1904}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{}</last-update-regen-times>
+      <unique-system-dir valType="String">BG</unique-system-dir>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
+      <Object Name="/Blade Design/TurboGeometryProperties:Blade Design Source" Version="1.0">
+        <class-type valType="String">TurboGeometryProperties</class-type>
+        <object-name valType="String">Blade Design Source</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design Source", "DataLinks": {}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "CreateHub": False, "CreateAllBlades": False, "MergeBladeTopology": True, "BladeLoftOption": "Streamwise", "ShroudClearance": "None", "LayerNumber": 1, "CreateFluidZone": True, "CreateNamedSelections": True, "BladeExt": 2, "PeriodicSurfExt": 5, "PeriodicSurfOption": "ThreePieces", "BGCaseFile": $$e9d9d4d9-4bea-40d6-ac51-c33581be9338, "FileName": $$da5630df-9b92-4729-b6a9-866aab8d3ebb, "LastModified": "0001/1/1 0:00:00", "MachineType": "CentrifugalCompressor", "ModelUnits": "mm", "StreamwiseCount": 20, "SpanwiseCount": 4}</member-data>
+      </Object>
+      <Object Name="/Blade Design/TurboGeometry:Blade Design Provider" Version="1.0">
+        <class-type valType="String">TurboGeometry</class-type>
+        <object-name valType="String">Blade Design Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design Provider", "DataSourceRef": $$687540d5-fcfe-457f-9adc-650ec3d172f6, "DataConnections": {"83cd7cf2-de1d-4f2b-95f0-dc39a919e74d": "INFFile"}}</member-data>
+      </Object>
+      <Object Name="/Blade Design/VistaGeometry:Blade Design Provider" Version="1.0">
+        <class-type valType="String">VistaGeometry</class-type>
+        <object-name valType="String">Blade Design Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design Provider", "DataSourceRef": $$687540d5-fcfe-457f-9adc-650ec3d172f6, "DataConnections": {}, "GeoData": None, "TransferData": None}</member-data>
+      </Object>
+    </Container>
+    <Container Name="Turbo Mesh" Version="1.0">
+      <container-type valType="String">Ansys.TurboSystem.TSBase.TSBaseAddin:TS Mesh</container-type>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">2177</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 2176, "Input": 2172, "Output": 1936}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Scopes": 0, "Blade Design": 2170, "Turbo Mesh": 2057, "Setup": 2166, "Solution": 0, "Results": 0}</last-update-regen-times>
+      <unique-system-dir valType="String">TS</unique-system-dir>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
+      <Object Name="/Turbo Mesh/TurboMeshProperties:Turbo Mesh Source" Version="1.0">
+        <class-type valType="String">TurboMeshProperties</class-type>
+        <object-name valType="String">Turbo Mesh Source</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh Source", "DataLinks": {"$$c6096710-4771-4e7f-9d87-919a458f70d0": $$d3fdb0ba-644b-4420-9443-f4dcd4a62f62}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "ExternalFileMap": {"/GEOMETRY/HUB Input Filename": $$819e72ab-c40e-4626-96f3-3c065f5a4729, "/GEOMETRY/SHROUD Input Filename": $$10c62f04-bf68-4aec-a2cc-4eda48a6b749, "/GEOMETRY/BLADE SET/BLADE Blade 1 Input Filename": $$d8bcac0f-bed4-4754-84be-71f2484571d3}, "InitCCL": None, "UseInitCCL": False, "CGNSFileTimeStamp": 0, "GTMFileTimeStamp": 2177, "IsTopologySuspended": False, "IgnoreBladeNamesInINF": False, "AvailableFlowpaths": "", "SelectedFlowpathName": "", "SelectedBladerowNum": 1, "CADSelectedBladeRow": "", "InletPositionOption": "Manual", "InletBlock": False, "UpstreamBladerowNumber": 0, "MinimumFaceAngle": "0.398029 [radian]", "MaximumFaceAngle": "2.76795 [radian]", "OutletPositionOption": "Manual", "OutletBlock": False, "DownstreamBladerowNumber": 0, "MeshNamePrefix": "", "BladerowNumberChoices": [], "MeshFile": $$8dfe277d-3e5b-455c-ba35-473745c96e01, "CGNSFile": None, "DEFFile": $$a144bb4d-49e7-4a10-80f7-493faee2bd4b, "VersionState": """COMMAND FILE:
+  TurboGrid Version = 18
+END
+""", "GeneralState": r"""COLOUR MAP DEFAULT:Default Colour Map
+  Colour Map Name = Rainbow
+END
+COMMAND FILE:
+  TurboGrid Version = 18
+END
+DATA READER:
+  File Length Units = cm
+END
+DEFAULT INSTANCE TRANSFORM:Default Transform
+  Angle Definition Method = Instances in 360
+  Apply Reflection = false
+  Apply Rotation = true
+  Apply Translation = false
+  Full Circle = Off
+  Number of Components in 360 = 6
+  Number of Copies = 1
+  Principal Axis = Z
+  Rotation Angle = 60
+  Rotation Axis From = 0 , 0 , 0
+  Rotation Axis To = 1 , 0 , 0
+  Rotation Axis Type = Principal Axis
+END
+FILE PROCESSING:
+  Path Stack = ., D:/Program Files/ANSYS Inc/v180/TurboGrid/etc
+  Processing Mode = None
+END
+GEOMETRY:
+  ICEM Topo Tolerance = 1e-5
+  Input Mode = Profile Points
+  Override ICEM Topo Tolerance = false
+  Triangulation Tolerance = 1e-5
+  BLADE SET:
+    Blade List Edges Link = BLADE SET/BLADE:Blade 1
+    Blade List Extend Link = BLADE SET/BLADE:Blade 1
+    Blade List Surface Link = BLADE SET/BLADE:Blade 1
+    Blade List Tip Link = BLADE SET/BLADE:Blade 1
+    Blade List Tolerance Link = BLADE SET/BLADE:Blade 1
+    Number Of Span Profiles = 5
+    Periodic And Passage Interface Surface Method = Blade Extents
+    Periodic Surface Bias = 0.5
+    Reorder Blades By Theta = false
+    Surface Parameterization Number Of Iterations = 200
+    Surface Parameterization Number Of Splits = 100
+    Vertices On Line Of Rotation At Leading Edge = off
+    Vertices On Line Of Rotation At Trailing Edge = off
+    BLADE:Blade 1
+      Affine Transform = BLADE:Blade 1/COMBINED TRANSFORM:Blade Transform
+      Apply Instancing Transform = Yes
+      BM Blade Surface Creation Method = Loft Streamwise
+      Blade Edge Detection Space = Auto
+      Blade Number = 0
+      Blade Surface Creation Method = Loft Spanwise
+      Blade Type = Main
+      Colour = 0.55, 0.55, 0.59
+      Colour Mode = Constant
+      Coordinate Frame Type = Cartesian
+      Curve Representation = Bspline
+      Draw Faces = On
+      Draw Lines = Off
+      Edge Links = BLADE:Blade 1/GEO LINE:Leading Edge, BLADE:Blade 1/GEO LINE:Trailing Edge, BLADE:Blade 1/GEO LINE:Trailing Edge 2
+      Enable Hub Tip = true
+      Enable Shroud Tip = true
+      FM Blade Surface Creation Method = Loft Streamwise
+      Geometric Representation = BladeModeler
+      Hub Name For Blade = ../HUB
+      Ignore Leading And Trailing Tags From Profiles = false
+      Input Angle Units = degree
+      Input Filename = C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\dp0\BG\TS\BG_profile.curve
+      Input Length Units = mm
+      Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+      LE Definition Specified In INF = true
+      Leading Edge Method = Low A
+      Leading Edge Type = Single
+      Locate Leading And Trailing Edges From Average = true
+      Show Surface = Yes
+      Shroud Name For Blade = ../SHROUD
+      Simplify Curves = Off
+      Surface Representation = Bspline
+      TE Definition Specified In INF = true
+      Theta Controllers For Blade = ../INLET,../OUTLET
+      Tip Names For Blade = ../BLADE SET/HUB TIP,../BLADE SET/SHROUD TIP
+      Tip Names For Blade Distance = ../BLADE SET/HUB TIP,../BLADE SET/SHROUD TIP
+      Trailing Edge Method = High A
+      Trailing Edge Type = Double Cutoff
+      Visibility = On
+      COMBINED TRANSFORM:Blade Transform
+        SIMPLE TRANSFORM:Axial Rotation
+          Machine Data = /GEOMETRY/MACHINE DATA
+          Option = Rotation
+          Rotation Angle = 0 [degree]
+          Rotation Option = Machine Axis
+        END
+        SIMPLE TRANSFORM:Translation
+          Machine Data = /GEOMETRY/MACHINE DATA
+          Option = Translation
+          Translation Distance = 0
+          Translation Option = Machine Axis
+        END
+        SIMPLE TRANSFORM:General Rotation
+          Machine Data = /GEOMETRY/MACHINE DATA
+          Option = Rotation
+          Rotation Axis From = 0,0,0
+          Rotation Axis To = 0,0,1
+          Rotation Option = General Axis
+        END
+      END
+      GEO LINE:Leading Edge
+        Colour = 0,1,0
+        Constraining Object For Line = .
+        Draw Lines = On
+        Line Colour = 0,1,0
+        Point List = GEO LINE:Leading Edge/PROFILE POINT:Point 1,GEO LINE:Leading Edge/PROFILE POINT:Point 2,GEO LINE:Leading Edge/PROFILE POINT:Point 3,GEO LINE:Leading Edge/PROFILE POINT:Point 4,GEO LINE:Leading Edge/PROFILE POINT:Point 5
+        Show Curve = On
+        PROFILE POINT:Point 1
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 0,1,0
+          Get Visibility From = .
+          Line Colour = 0,1,0
+          Point Symbol = Octahedron
+          Profile Number = 0
+          Requested Position = 2.06508 [cm], -1.06961e-007 [cm], -0.435158 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 2
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 0,1,0
+          Get Visibility From = .
+          Line Colour = 0,1,0
+          Point Symbol = Octahedron
+          Profile Number = 1
+          Requested Position = 2.42935 [cm], -9.72541e-008 [cm], -0.912081 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 3
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 0,1,0
+          Get Visibility From = .
+          Line Colour = 0,1,0
+          Point Symbol = Octahedron
+          Profile Number = 2
+          Requested Position = 2.81741 [cm], 0 [cm], -1.3697 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 4
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 0,1,0
+          Get Visibility From = .
+          Line Colour = 0,1,0
+          Point Symbol = Octahedron
+          Profile Number = 3
+          Requested Position = 3.24599 [cm], -3.99547e-007 [cm], -1.78952 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 5
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 0,1,0
+          Get Visibility From = .
+          Line Colour = 0,1,0
+          Point Symbol = Octahedron
+          Profile Number = 4
+          Requested Position = 3.69999 [cm], -7.31837e-007 [cm], -2.18198 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+      END
+      GEO LINE:Trailing Edge
+        Colour = 1,0.3,0
+        Constraining Object For Line = .
+        Draw Lines = On
+        Line Colour = 1,0.3,0
+        Point List = GEO LINE:Trailing Edge/PROFILE POINT:Point 1,GEO LINE:Trailing Edge/PROFILE POINT:Point 2,GEO LINE:Trailing Edge/PROFILE POINT:Point 3,GEO LINE:Trailing Edge/PROFILE POINT:Point 4,GEO LINE:Trailing Edge/PROFILE POINT:Point 5
+        Show Curve = On
+        PROFILE POINT:Point 1
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 0
+          Requested Position = -1.5741 [cm], 8.55642 [cm], 0.6 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 2
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 1
+          Requested Position = -1.57966 [cm], 8.55539 [cm], 0.3 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 3
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 2
+          Requested Position = -1.5862 [cm], 8.55418 [cm], -2.2864e-009 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 4
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 3
+          Requested Position = -1.59318 [cm], 8.55288 [cm], -0.3 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 5
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 4
+          Requested Position = -1.60085 [cm], 8.55145 [cm], -0.6 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+      END
+      GEO LINE:Trailing Edge 2
+        Colour = 1,0.3,0
+        Constraining Object For Line = .
+        Draw Lines = On
+        Line Colour = 1,0.3,0
+        Point List = GEO LINE:Trailing Edge 2/PROFILE POINT:Point 1,GEO LINE:Trailing Edge 2/PROFILE POINT:Point 2,GEO LINE:Trailing Edge 2/PROFILE POINT:Point 3,GEO LINE:Trailing Edge 2/PROFILE POINT:Point 4,GEO LINE:Trailing Edge 2/PROFILE POINT:Point 5
+        Show Curve = On
+        PROFILE POINT:Point 1
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 0
+          Requested Position = -1.22083 [cm], 8.61392 [cm], 0.6 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 2
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 1
+          Requested Position = -1.21393 [cm], 8.61489 [cm], 0.3 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 3
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 2
+          Requested Position = -1.20635 [cm], 8.61596 [cm], -2.28641e-009 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 4
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 3
+          Requested Position = -1.19795 [cm], 8.61713 [cm], -0.3 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+        PROFILE POINT:Point 5
+          Blade Name = ../../BLADE:Blade 1
+          Colour = 1,0.3,0
+          Get Visibility From = .
+          Line Colour = 1,0.3,0
+          Point Symbol = Octahedron
+          Profile Number = 4
+          Requested Position = -1.18859 [cm], 8.61843 [cm], -0.6 [cm]
+          Symbol Size = 0.3
+          Visibility = On
+        END
+      END
+    END
+    HUB TIP:
+      Colour = 0, 1, 0
+      Colour Mode = Constant
+      Draw Lines = On
+      Line Colour = 0, 1, 1
+      Line Width = 3
+      Option = None
+      Show Curve = Yes
+      Show Surface = No
+      Span Location = 0.05
+      Tip Clearance = 0.0
+      Tip Clearance At Leading Edge = 0.0
+      Tip Clearance At Trailing Edge = 0.0
+      Tip Extension Factor = 0.0
+      Tip Profile Number = 2
+      Use Tessellated Curve = true
+      Visibility = On
+    END
+    SHROUD TIP:
+      Colour = 0, 1, 0
+      Colour Mode = Constant
+      Draw Lines = On
+      Line Colour = 0, 1, 1
+      Line Width = 3
+      Option = None
+      Show Curve = Yes
+      Show Surface = No
+      Span Location = 0.95
+      Tip Clearance = 0.0
+      Tip Clearance At Leading Edge = 0.0
+      Tip Clearance At Trailing Edge = 0.0
+      Tip Extension Factor = 0.0
+      Tip Profile Number = 0
+      Use Tessellated Curve = true
+      Visibility = On
+    END
+  END
+  CAD:
+    File Type = automatic
+    Template List = BladeGeneric,BladeGeneric1,BladeGeneric2,BladeGeneric3,Hub,HubTip,Inlet,Outlet,Shroud,ShroudTip,genericTemplate,insertableGeneric
+    GEOMETRY DISPLAY INSTANCE:Highlight
+      Colour = 0.4,1.0,0.4
+      Draw Lines = On
+      Line Colour = 0.4,1.0,0.4
+      Line Width = 5
+      Show Curve = On
+      Sub Type = Highlight
+      Visibility = Off
+      POINT DISPLAY:geometry
+        Colour = 0.4,1.0,0.4
+        Normalized = 1
+        Point Symbol = Crosshair
+        Symbol Control Object = /GEOMETRY/SYMBOL CONTROL:Imported Geometry
+        Symbol Size = 0.02
+        Visibility = Off
+      END
+    END
+  END
+  HIGH PERIODIC:
+    Apply Instancing Transform = Yes
+    Blade List For Periodic = BLADE SET
+    Colour = 1, 1, 1
+    Colour Mode = Constant
+    Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+    Opening List For Periodic = INLET,OUTLET
+    Periodic Creation Method = Automatic
+    Rotation Angle = 0 [degree]
+    Show Curve = No
+    Show Surface = Yes
+    Transparency = 0.3
+    Visibility = Off
+    Visibility In Transformed Coordinates = Off
+  END
+  HUB:
+    Affine Transform = HUB/COMBINED TRANSFORM:Hub Transform
+    Apply Instancing Transform = Yes
+    Colour = 0.0, 0.4, 0.7
+    Coordinate Frame Type = Cartesian
+    Curve Representation = Piece-wise linear
+    Inlet Point = INLET/Low Hub Point
+    Inlet Trim Link = /GEOMETRY/INLET
+    Input Angle Units = degree
+    Input Filename = C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\dp0\BG\TS\BG_hub.curve
+    Input Length Units = mm
+    Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+    Machine Data Axis Link = MACHINE DATA
+    Outlet Point = OUTLET/Low Hub Point
+    Outlet Trim Link = /GEOMETRY/OUTLET
+    Periodic List = LOW PERIODIC,HIGH PERIODIC
+    Region Proximity Tolerance = 0.0111908 [cm]
+    Use True Surface For Projections = false
+    Visibility = On
+    Visibility In Transformed Coordinates = Off
+    COMBINED TRANSFORM:Hub Transform
+      SIMPLE TRANSFORM:Axial Rotation
+        Machine Data = /GEOMETRY/MACHINE DATA
+        Option = Rotation
+        Rotation Angle = 0 [degree]
+        Rotation Option = Machine Axis
+      END
+      SIMPLE TRANSFORM:Translation
+        Machine Data = /GEOMETRY/MACHINE DATA
+        Option = Translation
+        Translation Distance = 0
+        Translation Option = Machine Axis
+      END
+      SIMPLE TRANSFORM:General Rotation
+        Machine Data = /GEOMETRY/MACHINE DATA
+        Option = Rotation
+        Rotation Axis From = 0,0,0
+        Rotation Axis To = 0,0,1
+        Rotation Option = General Axis
+      END
+    END
+    TRIMMED CURVE:Hub Inlet
+      Colour = 0.0,1.0,0.0
+      Draw Lines = On
+      Line Colour = 0.0,1.0,0.0
+      Show Curve = On
+      Trimmed Curve Opening Block Top Link = /GEOMETRY/INLET
+      Visibility = On
+    END
+    TRIMMED CURVE:Hub Outlet
+      Colour = 1.0,0.0,0.0
+      Draw Lines = On
+      Line Colour = 1.0,0.0,0.0
+      Show Curve = On
+      Trimmed Curve Opening Block Top Link = /GEOMETRY/OUTLET
+      Visibility = On
+    END
+  END
+  INLET:
+    Apply Instancing Transform = Yes
+    Blade Set Tolerance Link = BLADE SET
+    Colour = 0, .5, 0
+    Colour Mode = Constant
+    Curve Representation = Piece-wise linear
+    Draw Faces = Off
+    Draw Lines = On
+    End Point = INLET/Low Shroud Point
+    Generate Intermediate Points = On
+    Hub Angle = -21.2457 [deg]
+    Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+    Opening Mode = Fully extend
+    Override Automatic Angles = Off
+    Parametric Hub Location = 1
+    Parametric Shroud Location = 1
+    Show Curve = Yes
+    Show Surface = No
+    Shroud Angle = -33.888 [deg]
+    Start Point = INLET/Low Hub Point
+    Toggle Trim = Off
+    Transparency = 0.3
+    Trim AR Location Method = Set A
+    Trim Hub Position = -0.039 [m], 0.002034 [m]
+    Trim Intersection Point 1 = -0.039 [m], 0.002034 [m]
+    Trim Intersection Point 2 = -0.039 [m], 0.037 [m]
+    Trim Shroud Position = -0.039 [m], 0.037 [m]
+    Use Simple Conic Surface = Off
+    Visibility = On
+    Visibility In Transformed Coordinates = On
+    GEO POINT:Low Hub Point
+      AR Location Method = From A and R
+      Constraining Object = ../LOW PERIODIC
+      Constraining Subobject = inlet hub centreline
+      Initializer = ../HUB
+      Low Periodic = true
+      Normalized = Off
+      Option = Not Periodic
+      Point Symbol = Octahedron
+      Requested ART = -0.039 [m],0.002034 [m],-165.261 [degree]
+      Requested Position = 0.0517489 [cm],-0.196707 [cm],-3.9 [cm]
+      Visibility = On
+    END
+    GEO POINT:Low Shroud Point
+      AR Location Method = From A and R
+      Constraining Object = ../LOW PERIODIC
+      Constraining Subobject = inlet shroud centreline
+      Initializer = ../SHROUD
+      Low Periodic = true
+      Normalized = Off
+      Option = Not Periodic
+      Point Symbol = Octahedron
+      Requested ART = -0.039 [m],0.037 [m],-138.138 [degree]
+      Requested Position = 2.46916 [cm],-2.75558 [cm],-3.9 [cm]
+      Visibility = On
+    END
+  END
+  LOW PERIODIC:
+    Apply Instancing Transform = Yes
+    Blade List For Periodic = BLADE SET
+    Colour = 1, 1, 1
+    Colour Mode = Constant
+    Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+    Opening List For Periodic = INLET,OUTLET
+    Periodic Creation Method = Automatic
+    Rotation Angle = 0 [degree]
+    Show Curve = No
+    Show Surface = Yes
+    Transparency = 0.3
+    Visibility = Off
+    Visibility In Transformed Coordinates = Off
+  END
+  MACHINE DATA:
+    Blades Per Bladeset = 1
+    Bladeset Count = 6
+    Effectively Zero Radius = 0.000796859 [cm]
+    File Length Units = cm
+    Hub Or Shroud Units For Effectively Zero Radius = mm
+    INF Filename = C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\dp0\BG\TS\BG.inf
+    Ignore Length Range Errors = false
+    Initial State = False
+    Machine Type = Other
+    Periodic Angle = 60 [degree]
+    Periodic Angle Method = Specified Count
+    Principal Axis = Z
+    Rotation Axis From = 0 , 0 , 0
+    Rotation Axis To = 1 , 0 , 0
+    Rotation Axis Type = Principal Axis
+    Shroud Name for Machine Data Image = /GEOMETRY/SHROUD
+    Surface Extension Factor = 0.1
+    Surface Extension Method = Extend
+    Turbo Transform Background Mesh Size = 2000
+    Turbo Transform Background Mesh Size For Topology = 2000
+    Visibility = off
+  END
+  OUTLET:
+    Apply Instancing Transform = Yes
+    Blade Set Tolerance Link = BLADE SET
+    Colour = .5, 0, 0
+    Colour Mode = Constant
+    Curve Representation = Piece-wise linear
+    Draw Faces = Off
+    Draw Lines = On
+    End Point = OUTLET/Low Shroud Point
+    Generate Intermediate Points = On
+    Hub Angle = 48.3631 [deg]
+    Input Length Units = mm
+    Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+    Meridional Splitter Curve Type = Bspline
+    Meridional Splitter Hub Boundary Layer Fraction = 0.25
+    Meridional Splitter Interface Hub Parametric Location = 0.5
+    Meridional Splitter Interface Shroud Parametric Location = 0.5
+    Meridional Splitter Shroud Boundary Layer Fraction = 0.25
+    Opening Mode = Fully extend
+    Override Automatic Angles = Off
+    Parametric Hub Location = 0.999996
+    Parametric Shroud Location = 0.999974
+    Show Curve = Yes
+    Show Surface = No
+    Shroud Angle = 51.2505 [deg]
+    Start Point = OUTLET/Low Hub Point
+    Toggle Trim = Off
+    Transparency = 0.3
+    Trim AR Location Method = Set A
+    Trim Hub Position = 0.006 [m], 0.0885 [m]
+    Trim Intersection Point 1 = 0.006 [m], 0.0885 [m]
+    Trim Intersection Point 2 = -0.006 [m], 0.0885 [m]
+    Trim Shroud Position = -0.006 [m], 0.0885 [m]
+    Use Simple Conic Surface = Off
+    Visibility = On
+    Visibility In Transformed Coordinates = On
+    GEO POINT:Low Hub Point
+      AR Location Method = From A and R
+      Constraining Object = ../LOW PERIODIC
+      Constraining Subobject = outlet hub centreline
+      Initializer = ../HUB
+      Low Periodic = true
+      Option = Not Periodic
+      Point Symbol = Octahedron
+      Requested ART = 0.006 [m],0.0885 [m],-19.6774 [degree]
+      Requested Position = 2.98001 [cm],8.33319 [cm],0.6 [cm]
+      Visibility = On
+    END
+    GEO POINT:Low Shroud Point
+      AR Location Method = From A and R
+      Constraining Object = ../LOW PERIODIC
+      Constraining Subobject = outlet shroud centreline
+      Initializer = ../SHROUD
+      Low Periodic = true
+      Option = Not Periodic
+      Point Symbol = Octahedron
+      Requested ART = -0.006 [m],0.0885 [m],-19.5794 [degree]
+      Requested Position = 2.96575 [cm],8.33827 [cm],-0.6 [cm]
+      Visibility = On
+    END
+  END
+  OUTLINE:
+    Colour = 0.5, 0.5, 0.5
+    Colour Mode = Constant
+    Draw Lines = on
+    High Periodic Link For Outline = /GEOMETRY/HIGH PERIODIC
+    Hub Link For Outline = /GEOMETRY/HUB
+    Line Width = 2
+    Low Periodic Link For Outline = /GEOMETRY/LOW PERIODIC
+    Show Curve = Yes
+    Show Surface = No
+    Shroud Link For Outline = /GEOMETRY/SHROUD
+    Visibility = On
+  END
+  REGION DATA:
+    InOut Define Regions Link = /GEOMETRY/HUB/TRIMMED CURVE:Hub Inlet, /GEOMETRY/HUB/TRIMMED CURVE:Hub Outlet, /GEOMETRY/SHROUD/TRIMMED CURVE:Shroud Inlet, /GEOMETRY/SHROUD/TRIMMED CURVE:Shroud Outlet, /GEOMETRY/LOW PERIODIC
+    Mesh Data Turbo Link = /MESH DATA
+    Proximity Change Link = /GEOMETRY/HUB, /GEOMETRY/SHROUD
+  END
+  SEGMENT HIGHLIGHT:
+    Draw Lines = On
+    Line Width = 3
+    Requested Index = 0
+    Show Curve = On
+    Show Surface = 0
+    Visibility = On
+  END
+  SHROUD:
+    Affine Transform = SHROUD/COMBINED TRANSFORM:Shroud Transform
+    Apply Instancing Transform = Yes
+    Colour = 0.785, 0.785, 0.785
+    Colour Mode = Constant
+    Coordinate Frame Type = Cartesian
+    Curve Representation = Piece-wise linear
+    Inlet Point = INLET/Low Shroud Point
+    Inlet Trim Link = /GEOMETRY/INLET
+    Input Angle Units = degree
+    Input Filename = C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\dp0\BG\TS\BG_shroud.curve
+    Input Length Units = mm
+    Instancing Transform = /DEFAULT INSTANCE TRANSFORM:Default Transform
+    Machine Data Axis Link = MACHINE DATA
+    Outlet Point = OUTLET/Low Shroud Point
+    Outlet Trim Link = /GEOMETRY/OUTLET
+    Periodic List = LOW PERIODIC,HIGH PERIODIC
+    Region Proximity Tolerance = 0.00762698 [cm]
+    Transparency = 0.41
+    Use True Surface For Projections = false
+    Visibility = On
+    Visibility In Transformed Coordinates = Off
+    COMBINED TRANSFORM:Shroud Transform
+      SIMPLE TRANSFORM:Axial Rotation
+        Machine Data = /GEOMETRY/MACHINE DATA
+        Option = Rotation
+        Rotation Angle = 0 [degree]
+        Rotation Option = Machine Axis
+      END
+      SIMPLE TRANSFORM:Translation
+        Machine Data = /GEOMETRY/MACHINE DATA
+        Option = Translation
+        Translation Distance = 0
+        Translation Option = Machine Axis
+      END
+      SIMPLE TRANSFORM:General Rotation
+        Machine Data = /GEOMETRY/MACHINE DATA
+        Option = Rotation
+        Rotation Axis From = 0,0,0
+        Rotation Axis To = 0,0,1
+        Rotation Option = General Axis
+      END
+    END
+    TRIMMED CURVE:Shroud Inlet
+      Colour = 0.0,1.0,0.0
+      Draw Lines = On
+      Line Colour = 0.0,1.0,0.0
+      Show Curve = On
+      Trimmed Curve Opening Block Top Link = /GEOMETRY/INLET
+      Visibility = On
+    END
+    TRIMMED CURVE:Shroud Outlet
+      Colour = 1.0,0.0,0.0
+      Draw Lines = On
+      Line Colour = 1.0,0.0,0.0
+      Show Curve = On
+      Trimmed Curve Opening Block Top Link = /GEOMETRY/OUTLET
+      Visibility = On
+    END
+  END
+  SYMBOL CONTROL:Symbol Control
+    Point Symbol = Octahedron
+    Symbol Size = 0.186111
+  END
+  SYMBOL CONTROL:Imported Geometry
+    Point Symbol = Octahedron
+    Symbol Size = 1.0
+  END
+  TURBO TRANSFORM:
+    Automatic Transform Selection = Full
+    Hub Name For Transform = HUB
+    Shroud Name For Transform = SHROUD
+  END
+END
+SYSTEM COLOUR MAP:Rainbow
+  Colour Map Colours = 0, 0, 0, 1, 1, 0.10, 0, 0.5, 1, 1, 0.25, 0, 1, 1, 1, 0.44, 0, 1, 0.5, 1, 0.50, 0, 1, 0, 1, 0.57, 0.5, 1, 0, 1, 0.75, 1, 1, 0, 1, 0.90, 1, 0.5, 0, 1, 1, 1, 0, 0, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Inverse Rainbow
+  Colour Map Colours = 0, 1, 0, 0, 1, 0.10, 1, 0.5, 0, 1, 0.25, 1, 1, 0, 1, 0.43, 0.5, 1, 0, 1, 0.50, 0, 1, 0, 1, 0.56, 0, 1, 0.5, 1, 0.75, 0, 1, 1, 1, 0.90, 0, 0.5, 1, 1, 1, 0, 0, 1, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Rainbow 6
+  Colour Map Colours = 0, 0, 0, 1, 1, 0.08, 0, 0.5, 1, 1, 0.2, 0, 1, 1, 1, 0.35, 0, 1, 0.5, 1, 0.4, 0, 1, 0, 1, 0.45, 0.5, 1, 0, 1, 0.6, 1, 1, 0, 1, 0.72, 1, 0.5, 0, 1, 0.8, 1, 0, 0, 1, 0.9, 1, 0, 0.5, 1, 1, 1, 0, 1, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Inverse Rainbow 6
+  Colour Map Colours = 0, 1, 0, 1, 1, 0.1, 1, 0, 0.5, 1, 0.2, 1, 0, 0, 1, 0.28, 1, 0.5, 0, 1, 0.4, 1, 1, 0, 1, 0.55, 0.5, 1, 0, 1, 0.6, 0, 1, 0, 1, 0.65, 0, 1, 0.5, 1, 0.8, 0, 1, 1, 1, 0.92, 0, 0.5, 1, 1, 1, 0, 0, 1, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Zebra
+  Colour Map Colours = 0, 1, 1, 1, 1, 1.0, 0, 0, 0, 1
+  Colour Map Divisions = 5
+  Colour Map Storage Type = System
+  Colour Map Type = Zebra
+END
+SYSTEM COLOUR MAP:Greyscale
+  Colour Map Colours = 0, 0.01, 0.01, 0.01, 1, 1, 0.99, 0.99, 0.99, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Inverse Greyscale
+  Colour Map Colours = 0, 0.99, 0.99, 0.99, 1, 1, 0.01, 0.01, 0.01, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Blue to White
+  Colour Map Colours = 0, 0, 0, 1, 1, 1, 1, 1, 1, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:White to Blue
+  Colour Map Colours = 0, 1, 1, 1, 1, 1, 0, 0, 1, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:FLUENT Rainbow
+  Colour Map Colours = 0, 0, 0, 1, 1, 0.278, 0, 1, 1, 1, 0.389, 0, 1, 0.5, 1, 0.444, 0, 1, 0, 1, 0.667, 1, 1, 0, 1, 1, 1, 0, 0, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Transparency
+  Colour Map Colours = 0, 1, 1, 1, 0, 1, 1, 1, 1, 1
+  Colour Map Storage Type = System
+END
+SYSTEM COLOUR MAP:Minimal Map
+  Colour Map Colours = 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+  Colour Map Storage Type = System
+END
+TOPOLOGY CHOOSER:
+  ATM TOPOLOGY CHOICE:Single Round Round Symmetric
+    Blade Count = 1
+    Leading Edge Shape = Rounded
+    Primary Topology Choice = true
+    Topology Description = A symmetric topology at the leading and trailing edges for a single- bladed geometry with round leading and trailing edges.
+    Topology Image = RoundRoundSymmetric.png
+    Topology List = LERoundedSymmetricStar, PassageBlock1by4, TERoundedSymmetricStar
+    Trailing Edge Shape = Rounded
+  END
+  ATM TOPOLOGY CHOICE:Single Round Round Refined
+    Blade Count = 1
+    Leading Edge Angle Range = -90, -15, 15, 90
+    Leading Edge Shape = Rounded
+    Topology Description = A refined topology at the leading and trailing edges for a single- bladed geometry with round leading and trailing edges.
+    Topology Image = RoundRoundRefined.png
+    Topology List = Single Blade Refined Leading Edge Passage Trailing Edge
+    Trailing Edge Angle Range = -90, -15, 15, 90
+    Trailing Edge Shape = Rounded
+  END
+  ATM TOPOLOGY CHOICE:Single Round Cutoff Symmetric
+    Blade Count = 1
+    Leading Edge Shape = Rounded
+    Primary Topology Choice = true
+    Topology Description = A symmetric topology at the leading edge for a single- bladed geometry with a round leading edge and a cut-off trailing edge.
+    Topology Image = RoundCutoffSymmetric.png
+    Topology List = LERoundedSymmetricStar, PassageBlock1by4, Single Blade Trailing Edge Cutoff
+    Trailing Edge Shape = Cutoff
+  END
+  ATM TOPOLOGY CHOICE:Single Round Cutoff Refined
+    Blade Count = 1
+    Leading Edge Angle Range = -90, -15, 15, 90
+    Leading Edge Shape = Rounded
+    Topology Description = A refined topology at the leading edge for a single- bladed geometry with a round leading edge and a cut-off trailing edge.
+    Topology Image = RoundCutoffRefined.png
+    Topology List = Single Blade Refined Leading Edge Passage, Single Blade Trailing Edge Cutoff
+    Trailing Edge Shape = Cutoff
+  END
+  ATM TOPOLOGY CHOICE:Single Cutoff Round Symmetric
+    Blade Count = 1
+    Leading Edge Shape = Cutoff
+    Primary Topology Choice = true
+    Topology Description = A symmetric topology at the trailing edge for a single- bladed geometry with a cut-off leading edge and a round trailing edge.
+    Topology Image = CutoffRoundSymmetric.png
+    Topology List = Single Blade Leading Edge Cutoff, PassageBlock1by4, TERoundedSymmetricStar
+    Trailing Edge Shape = Rounded
+  END
+  ATM TOPOLOGY CHOICE:Single Cutoff Cutoff
+    Blade Count = 1
+    Leading Edge Shape = Cutoff
+    Primary Topology Choice = true
+    Topology Description = A topology appropriate for a single blade with both leading and trailing edges cut-off. Suitable topology based on blade angles is chosen at the cut-off blade ends.
+    Topology Image = CutoffCutoff.png
+    Topology List = Single Blade Leading Edge Cutoff, PassageBlock1by4, Single Blade Trailing Edge Cutoff
+    Trailing Edge Shape = Cutoff
+  END
+  ATM TOPOLOGY CHOICE:Single Splitter
+    Blade Count = 2
+    Leading Edge Shape = Rounded
+    Primary Topology Choice = true
+    Topology Description = A topology appropriate for a geometry with a main blade and one splitter blade. The topology will be automatically adjusted for leading and trailing edge blade angles.
+    Topology Image = SingleSplitter.png
+    Topology List = Single Splitter Leading Edge, Single Splitter Main Passage, S1_LESplitterCircle, S1_LP1by4, Single Splitter Low Passage Cutoff, S1_HP1by4, Single Splitter High Passage Cutoff
+    Trailing Edge Shape = Cutoff
+  END
+  ATM TOPOLOGY CHOICE:Double Splitter Symmetric Cutoff
+    Beta Feature Topology = true
+    Blade Count = 3
+    Leading Edge Shape = Rounded
+    Primary Topology Choice = true
+    Topology Description = A topology appropriate for a geometry with a main blade and two splitter blades. The topology will be automatically adjusted for leading and trailing edge blade angles.
+    Topology Image = DoubleSplitterSymmetricCutOff.png
+    Topology List = S2_SymmetricSplitterBeta
+    Trailing Edge Shape = Cutoff
+  END
+  ATM TOPOLOGY CHOICE:Tandem Vane Aligned High
+    Beta Feature Topology = false
+    Blade Count = 2
+    Leading Edge Shape = Rounded
+    Primary Topology Choice = false
+    Topology Description = A topology appropriate for a geometry with a main blade and a tandem blade that is aligned with the main blade and higher in the theta direction. The leading edge of the tandem vane should be approximately at the same streamwise location as the trailing edge of the main blade. The topology will be automatically adjusted for leading and trailing edge blade angles.
+    Topology Image = TandemVanesAlignedHigh.png
+    Topology List = TandemVanesAlignedHigh
+    Trailing Edge Shape = Rounded
+  END
+  ATM TOPOLOGY CHOICE:Tandem Vane Aligned Low
+    Beta Feature Topology = false
+    Blade Count = 2
+    Leading Edge Shape = Rounded
+    Primary Topology Choice = false
+    Topology Description = A topology appropriate for a geometry with a main blade and a tandem blade that is aligned with the main blade and lower in the theta direction. The leading edge of the tandem vane should be approximately at the same streamwise location as the trailing edge of the main blade. The topology will be automatically adjusted for leading and trailing edge blade angles.
+    Topology Image = TandemVanesAlignedLow.png
+    Topology List = TandemVanesAlignedLow
+    Trailing Edge Shape = Rounded
+  END
+  ATM TOPOLOGY CHOICE:Single Splitter High Rounded Trailing Edge
+    Blade Count = 2
+    Leading Edge Shape = Rounded
+    Primary Topology Choice = true
+    Topology Description = A topology appropriate for a geometry with a main blade and one splitter blade. Both blades have rounded trailing edges.
+    Topology Image = SingleSplitterRoundedTE.png
+    Topology List = S1_RoundedLECircleHigh,S1_MP1by8High,S1_RoundedLESplitterCircle, S1_LP1by4,S1_HP1by4,S1_RoundedTESymmetricTwoBlades2by8
+    Trailing Edge Shape = Rounded
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Blade Leading Edge Cutoff
+    Angle Ranges = -40, 40
+    Blade End = LE
+    Topology Piece Options = LECutoffHerringboneHigh, LEDoubleHerring, LECutoffHerringboneLow
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Blade Trailing Edge Cutoff
+    Angle Ranges = -40, 40
+    Blade End = TE
+    Topology Piece Options = TECutoffHerringboneLow, TEDoubleHerring, TECutoffHerringboneHigh
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Splitter Low Passage Cutoff
+    Angle Ranges = -40, 40
+    Blade End = TE
+    Topology Piece Options = S1_LPTECutoffHerringboneLow, S1_LPTEDoubleHerringbone, S1_LPTECutoffHerringboneHigh
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Splitter High Passage Cutoff
+    Angle Ranges = -40, 40
+    Blade End = TE
+    Topology Piece Options = S1_HPTECutoffHerringboneLow, S1_HPTEDoubleHerringbone, S1_HPTECutoffHerringboneHigh
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Splitter Leading Edge
+    Angle Ranges = -15, 15
+    Blade End = LE
+    Topology Piece Options = S1_LECircleLow, S1_LERoundedSymmetric2by8, S1_LECircleHigh
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Splitter Main Passage
+    Angle Ranges = -15, 15
+    Blade End = LE
+    Topology Piece Options = S1_MP1by8Low, S1_MP1by8, S1_MP1by8High
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Blade Refined Leading Edge Passage
+    Angle Ranges = 0
+    Blade End = LE
+    Topology Piece Options = LECircleLowPassage, LECircleHighPassage
+  END
+  ATM TOPOLOGY PIECE SELECTOR:Single Blade Refined Leading Edge Passage Trailing Edge
+    Angle Ranges = 0
+    Blade End = LETE
+    Topology Piece Options = LECircleLow_TECircleHigh, LECircleLow_TECircleLow, LECircleHigh_TECircleHigh, LECircleHigh_TECircleLow
+  END
+END
+UNIT SYSTEM:
+  Preferred Units System = SI
+  Update Units to Preferred = Off
+END
+VIEWPORT MANAGER:
+  Background Colour = 0.42, 0.55, 0.871
+  Background Colour 2 = 1,1,1
+  Background Colour Type = Top-Bottom Gradient
+  Background Image = Mountains
+  Background Image Mapping = Flat
+  Background Image Type = Predefined
+  Background Type = Colour
+  Global Edge Colour = 0,0,0
+  Global Text Colour = 0,0,0
+  Maximized Viewport = -1
+  Viewer Eye Point = Normal
+  Viewer Eye Separation = 5
+  Viewport 1 View = View 1
+  Viewport 2 View = View 2
+  Viewport 3 View = View 3
+  Viewport 4 View = View 4
+  Viewport Layout = No Split
+END
+""", "ExpressionState": "", "OutputParamsState": "", "TopologyState": r"""TOPOLOGY SET:
+  ATM BM Cartesian Mesh Smoothing Iterations = 10
+  ATM Cutoff Block Background Mesh Refinement Levels = 4
+  ATM Cutoff Gradient Reduction Factor = 0.5
+  ATM Periodic Start Vertex Use 150 Default Behavior = false
+  ATM Topology Choice = Single Round Cutoff Symmetric
+  ATM Topology List = LERoundedSymmetricStar,PassageBlock1by4,TECutoffHerringboneHigh
+  ATM Topology Optimizer = true
+  Background Mesh Size Control = 8
+  Base Edge Splits = 6,12,7,56,38,6,31,3,4,3,5,3,4
+  Blade List For Topology Line of Rotation Link = /GEOMETRY/BLADE SET
+  Blade Set For Surfaces Link = /GEOMETRY/BLADE SET
+  Conglomeration Retained Vertices List = LERoundedSymmetricStar, 13
+  Curve Surface Surface Projection Iterations = 30
+  Face Interpolation Type = SNWE
+  High Periodic List For Topology = /GEOMETRY/HIGH PERIODIC
+  HubShroud Layer Geometry Link = /LAYERS/LAYER:Hub, /LAYERS/LAYER:Shroud
+  HubShroud Layer Link = /LAYERS/LAYER:Hub, /LAYERS/LAYER:Shroud
+  LE Cutoff Upstream Block Background Mesh Edge Count = -1
+  LE Cutoff Upstream Block Background Mesh Edge Count Override = false
+  LE Cutoff Upstream Block Master Edge Count = 8
+  LE Pinning Line Index = -1
+  Local Template Directory = C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\user_files
+  Lock Down ATM Mesh Size = Off
+  Low Periodic List For Topology = /GEOMETRY/LOW PERIODIC
+  Machine Type Link = /GEOMETRY/MACHINE DATA
+  Match Expansions Across Periodic = true
+  Mesh Data Link = /MESH DATA
+  Number Of Downstream Not Matching Periodic Blocks = 0
+  Number Of Smoothing Iterations = 100
+  Number Of Upstream Not Matching Periodic Blocks = 0
+  One To One Passage Interfaces = true
+  One To One Periodicity Range = Full
+  Override ATM Topology Choice = false
+  Override ATM Topology List = false
+  Override Base Edge Splits = false
+  Override Conglomeration Retained Vertices List = false
+  Override Not Matching Periodic Blocks Calculation = false
+  Periodic Node Projection = Float on Surface
+  Smoothing Expansion = 1.99
+  Smoothing Relaxation = 0.8
+  Smoothing Relaxation On Boundary = 0.5
+  Smoothing Space = Blade to Blade
+  Span Location = 0.5
+  TE Cutoff Downstream Block Background Mesh Edge Count = 6
+  TE Cutoff Downstream Block Background Mesh Edge Count Override = false
+  TE Cutoff Downstream Block Master Edge Count = 8
+  TE Pinning Line Index = -1
+  Topology CRC = 203786
+  Topology Edges Link = TOPOLOGY SET/TOPOLOGY:Blade 1
+  Topology From File = false
+  Topology Surfaces Link = TOPOLOGY SET/TOPOLOGY:Blade 1
+  Use Projection Convergence Optimization = true
+  Use Transformed Space for Faces = yes
+  TOPOLOGY:Blade 1
+    Collapse Inlet Blocks = on
+    Collapse Outlet Blocks = on
+    Default Expansion Factor = 1.2
+    First Block Offset From Blade To Inlet Surface = 0.0
+    First Block Offset From Blade To Outlet Surface = 0.0
+    First Block Offset From Blade To Periodic Surface = 0.0
+    Independent JGrid Patterns = on
+    Interface Vertex Indices = -1, -1
+    Leading Edge Cutoff OGrid Corner Vertices Method = Project To OGrid
+    Number Of Blocks Downstream Of Blade = 0
+    Number Of Blocks Upstream Of Blade = 0
+    Number Of Constant Blocks Leading To Trailing Edge = 0
+    Number Of Vertices Floating On Centerlines = 0
+    Number of Blade Blocks = 5
+    Number of Passage Blocks = 10
+    Number of Passage Blocks Across = 6
+    OGrid Distance Factor = 0.5
+    Override Blade Blocks Calculation = false
+    Override Blade To Inlet Surface Calculation = false
+    Override Blade To Outlet Surface Calculation = false
+    Override Blade To Periodic Surface Calculation = false
+    Override Sharp Leading Edge Calculation = off
+    Override Sharp Trailing Edge Calculation = off
+    Override Topology Pattern Orientation = false
+    Passage Block Length Scale Definition = Blocks Across Passage
+    Project Edges To Inlet = off
+    Project Edges To Outlet = off
+    Sharp Leading Edge = off
+    Sharp Trailing Edge = off
+    Topology Definition = H/J-Grid
+    Topology For Topology Sense Block Counts = None
+    Topology Matching Across Blade = false
+    Topology Sense Block Counts = -1, -1, -1, -1, -1, -1, -1, -1
+    Trailing Edge Cutoff OGrid Corner Vertices Method = Project To OGrid
+    Use Extrapolation From LE And TE For OGrid = yes
+    Use Improved Topology Heuristics For Upstream And Downstream Blocks = yes
+  END
+END
+LAYERS:
+  Autogenerate Layers at Mesh Creation = on
+  Leading And Trailing Edge OGrid Control Point Method = Surface
+  Leading And Trailing Edges Float On Blade = off
+  Leading Edges Float On Blade = off
+  Orthogonality Factor On Hub = 0.0
+  Orthogonality Factor On Shroud = 0.0
+  Overlap Low And High Blade Curves = true
+  Trailing Edges Float On Blade = off
+  Visualize Accurate Refined Mesh On Layers = False
+  LAYER:Hub
+    Colour = 1.0, 0.0, 0.0
+    Draw Faces = Off
+    Draw Lines = On
+    Line Width = 5
+    Master Topology CRC = 2048
+    Master Topology Visibility = on
+    Mesh Visibility = on
+    Number Of Smoothing Iterations = 60
+    Override Point Size = No
+    Projection Frequency = 10
+    Projection Persistence = 2
+    Refined Mesh Number Of Smoothing Iterations = 0
+    Refined Mesh Projection Frequency = 10
+    Refined Mesh Projection Persistence = 1
+    Refined Mesh Smoothing Iteration Mode = Medium
+    Smoothing Iteration Mode = Medium
+    Smoothing Space = Blade to Blade
+    Span Location = 0.0
+    Topology CRC = 203786
+    Topology Visibility = off
+    User Control Points = on
+    Visibility = on
+    Visibility Of Master Edge Labels = false
+    LAYER PREVIEW:Master Topology
+      Colour = 0.75, 0.5, 1.0
+      Draw Lines = on
+      Line Width = 3
+      Render Type = Master Topology
+      Visibility = on
+    END
+    LAYER PREVIEW:Topology
+      Colour = 0.75, 0.75, 0.0
+      Draw Lines = on
+      Line Width = 2
+      Render Type = Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Refined Mesh
+      Apply Instancing Transform = On
+      Colour = 0.7, 0.5, 0.3
+      Draw Lines = on
+      Instancing Transform = /Default Transform
+      Line Width = 1
+      Render Type = Refined
+      Visibility = on
+    END
+    SYMBOL CONTROL:Symbol Control
+      Point Symbol = Octahedron
+      Symbol Size = 0.15
+    END
+  END
+  LAYER:Shroud
+    Colour = 1.0, 0.0, 0.0
+    Draw Faces = Off
+    Draw Lines = On
+    Line Width = 5
+    Master Topology CRC = 2048
+    Master Topology Visibility = on
+    Mesh Visibility = on
+    Number Of Smoothing Iterations = 60
+    Override Point Size = No
+    Projection Frequency = 10
+    Projection Persistence = 2
+    Refined Mesh Number Of Smoothing Iterations = 0
+    Refined Mesh Projection Frequency = 10
+    Refined Mesh Projection Persistence = 1
+    Refined Mesh Smoothing Iteration Mode = Medium
+    Smoothing Iteration Mode = Medium
+    Smoothing Space = Blade to Blade
+    Span Location = 1.0
+    Topology CRC = 203786
+    Topology Visibility = off
+    User Control Points = on
+    Visibility = on
+    Visibility Of Master Edge Labels = false
+    LAYER PREVIEW:Master Topology
+      Colour = 0.75, 0.5, 1.0
+      Draw Lines = on
+      Line Width = 3
+      Render Type = Master Topology
+      Visibility = on
+    END
+    LAYER PREVIEW:Topology
+      Colour = 0.75, 0.75, 0.0
+      Draw Lines = on
+      Line Width = 2
+      Render Type = Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Refined Mesh
+      Apply Instancing Transform = On
+      Colour = 0.7, 0.5, 0.3
+      Draw Lines = on
+      Instancing Transform = /Default Transform
+      Line Width = 1
+      Render Type = Refined
+      Visibility = on
+    END
+    SYMBOL CONTROL:Symbol Control
+      Point Symbol = Octahedron
+      Symbol Size = 0.15
+    END
+  END
+  LAYER:Layer 1
+    Colour = 1.0, 0.0, 0.0
+    Draw Faces = Off
+    Draw Lines = On
+    Line Width = 5
+    Master Topology CRC = 2048
+    Number Of Smoothing Iterations = 0
+    Override Point Size = No
+    Projection Persistence = 2
+    Refined Mesh Number Of Smoothing Iterations = 0
+    Refined Mesh Smoothing Iteration Mode = Medium
+    Smoothing Iteration Mode = Medium
+    Smoothing Space = Blade to Blade
+    Span Location = 0.540716
+    Topology CRC = 203786
+    User Control Points = on
+    Visibility = off
+    LAYER PREVIEW:Master Topology
+      Colour = 0.75, 0.5, 1.0
+      Draw Lines = yes
+      Line Width = 3
+      Render Type = Master Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Topology
+      Colour = 0.75, 0.75, 0.0
+      Draw Lines = yes
+      Line Width = 2
+      Render Type = Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Refined Mesh
+      Colour = 0.7, 0.5, 0.3
+      Draw Lines = yes
+      Line Width = 1
+      Render Type = Refined
+      Visibility = off
+    END
+    SYMBOL CONTROL:Symbol Control
+      Point Symbol = Octahedron
+      Symbol Size = 0.15
+    END
+  END
+  LAYER:Layer 2
+    Colour = 1.0, 0.0, 0.0
+    Draw Faces = Off
+    Draw Lines = On
+    Line Width = 5
+    Master Topology CRC = 2048
+    Number Of Smoothing Iterations = 0
+    Override Point Size = No
+    Projection Persistence = 2
+    Refined Mesh Number Of Smoothing Iterations = 0
+    Refined Mesh Smoothing Iteration Mode = Medium
+    Smoothing Iteration Mode = Medium
+    Smoothing Space = Blade to Blade
+    Span Location = 0.760884
+    Topology CRC = 203786
+    User Control Points = on
+    Visibility = off
+    LAYER PREVIEW:Master Topology
+      Colour = 0.75, 0.5, 1.0
+      Draw Lines = yes
+      Line Width = 3
+      Render Type = Master Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Topology
+      Colour = 0.75, 0.75, 0.0
+      Draw Lines = yes
+      Line Width = 2
+      Render Type = Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Refined Mesh
+      Colour = 0.7, 0.5, 0.3
+      Draw Lines = yes
+      Line Width = 1
+      Render Type = Refined
+      Visibility = off
+    END
+    SYMBOL CONTROL:Symbol Control
+      Point Symbol = Octahedron
+      Symbol Size = 0.15
+    END
+  END
+  LAYER:Layer 3
+    Colour = 1.0, 0.0, 0.0
+    Draw Faces = Off
+    Draw Lines = On
+    Line Width = 5
+    Master Topology CRC = 2048
+    Number Of Smoothing Iterations = 0
+    Override Point Size = No
+    Projection Persistence = 2
+    Refined Mesh Number Of Smoothing Iterations = 0
+    Refined Mesh Smoothing Iteration Mode = Medium
+    Smoothing Iteration Mode = Medium
+    Smoothing Space = Blade to Blade
+    Span Location = 0.326256
+    Topology CRC = 203786
+    User Control Points = on
+    Visibility = off
+    LAYER PREVIEW:Master Topology
+      Colour = 0.75, 0.5, 1.0
+      Draw Lines = yes
+      Line Width = 3
+      Render Type = Master Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Topology
+      Colour = 0.75, 0.75, 0.0
+      Draw Lines = yes
+      Line Width = 2
+      Render Type = Topology
+      Visibility = off
+    END
+    LAYER PREVIEW:Refined Mesh
+      Colour = 0.7, 0.5, 0.3
+      Draw Lines = yes
+      Line Width = 1
+      Render Type = Refined
+      Visibility = off
+    END
+    SYMBOL CONTROL:Symbol Control
+      Point Symbol = Octahedron
+      Symbol Size = 0.15
+    END
+  END
+END
+MESH DATA:
+  ATM BL Variable Expansion = on
+  ATM Constant First Element Offset = true
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Hub To Shroud Node Distribution = Constant Span
+  ATM Mesh Cutoff Block Smoothing Iterations = 20
+  ATM Mesh Smoothing Iterations = 12
+  ATM Proportional BL Factor Base = 3.0
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  ATM Spanwise To B2B Offset Factor = 1.0
+  ATM Tip Mesh Additional Smoothing = off
+  ATM Tip Mesh Initial Parametric Cross Location LE = 0.25
+  ATM Tip Mesh Initial Parametric Cross Location TE = 0.75
+  ATM Tip Mesh Specify Initial Parametric Cross Location LE = off
+  ATM Tip Mesh Specify Initial Parametric Cross Location TE = off
+  Apply Instancing Transform = On
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 2
+  Between Boundary Layers Number Of Const Elements = 1
+  Between Boundary Layers Number Of Elements = 4
+  Blade List For Mesh = /GEOMETRY/BLADE SET
+  Blade Mesh Data Surfaces List = MESH DATA/BLADE MESH DATA:Blade 1
+  Blade Mesh Data Top List = MESH DATA/BLADE MESH DATA:Blade 1
+  Blade Tip First Element Size Factor = 1.15
+  Blade Tip Projection Space = RNM
+  Boundary Layer Specification Method = Proportional
+  Boundary Layer Specification Mode = Normalized
+  Colour = 0.247059, 0.498039, 0.74902
+  Colour Mode = Constant
+  Colour Variable Boundary Values = Hybrid
+  Default Expansion Factor = 1.15
+  Draw Lines = on
+  Edge Split Factor List = /MESH DATA/EDGE SPLIT CONTROL:Blade 1 Boundary Layer Control
+  Elliptic Mesh Smoothing On Geometry Faces = off
+  Elliptic Mesh Smoothing Projection Frequency = 7
+  Elliptic Mesh Smoothing Relaxation = 0.7
+  Global Size Factor = 0.7
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  Hub And Shroud Node Distribution For Inlet And Outlet = Nonuniform
+  Hub Boundary Layer Distance = 0.184839 [cm]
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 2.01432
+  Hub Boundary Layer Number Of Elements = 6
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 200
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.00559889 [cm]
+  Hub Vertex Offset = 0.00302906
+  Hub Vertex YPlus = 19.9258
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = False
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  Inlet Theta Equalization Factor = 0.0
+  Inlet Theta Equalization Length Factor = 1.0
+  Instancing Transform = /Default Transform
+  LE Cutoff Edge Split Factor = 1.0
+  LE Cutoff Edge Split Factor Minimum = 0.1
+  Layer Generate Link List = /LAYERS/LAYER:Hub, /LAYERS/LAYER:Shroud
+  Line Colour = 0.247059, 0.498039, 0.74902
+  Line Width = 1
+  Max = 0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Curves Tesselation Number Of Power Samples = 2
+  Mesh Curves Tesselation Number Of Power Samples Override = false
+  Mesh Generation = false
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Min = 0
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 3
+  Number Of Elements = 31020
+  Number Of Elements Per Block Edge = 2
+  Number Of Elliptic Mesh Smoothing Iterations = 12
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 12
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Smoothing Iterations = 0
+  Number Of Spanwise Blade Elements = 15
+  Number Of Vertices = 36048
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = False
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Outlet Theta Equalization Factor = 0.0
+  Outlet Theta Equalization Length Factor = 1.0
+  Override Inlet Distribution = Off
+  Override Inlet Element Count Calculation = 0
+  Override Outlet Distribution = Off
+  Override Outlet Element Count Calculation = 0
+  Periodic List For Mesh = /GEOMETRY/LOW PERIODIC, /GEOMETRY/HIGH PERIODIC
+  Projection Frequency = 10
+  Projection Persistence = 1
+  Range = Global
+  Region Data Pre Topology Link = /GEOMETRY/REGION DATA
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distance = 0.184839 [cm]
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.79242
+  Shroud Boundary Layer Number Of Elements = 6
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.00559889 [cm]
+  Shroud Vertex Offset = 0.00302906
+  Shroud Vertex YPlus = 19.9258
+  Smoothing Expansion = 1.99
+  Smoothing Relaxation = 0.8
+  Smoothing Relaxation On Boundary = 0.2
+  Spanwise Blade Distribution Option = End Ratio
+  Spanwise Curve Type = Automatic
+  Surface Mesh Method For Irregular Cad = true
+  Surface Mesh Using Layers Option = All Edges
+  TE Cutoff Edge Split Factor = 1.0
+  TE Cutoff Edge Split Factor Minimum = 0.75
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 50000
+  Topology List For Mesh = /TOPOLOGY SET
+  Use Blade Tip First Element Size Factor = false
+  Use Improved Element Matching At OGrid = on
+  Vertex Offset Specification Mode = Absolute
+  Visibility = off
+  BLADE MESH DATA:Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Blade End Ratio = 50
+    Blade Vertex Distance = 0.00694833 [cm]
+    Blade Vertex Offset = 0.00694833
+    Blade Vertex YPlus = 24.7282
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Angle To Switch Mean Line Into Cut Off Corner = 45 [degree]
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Hub Tip Topology Definition = ATM Optimized
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of OGrid Elements = 0
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    OGrid Distance Definition = Proportional to Radius
+    OGrid Distribution Option = End Ratio
+    OGrid Mesh Expansion Rate = 1.15
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+    Shroud Tip Topology Definition = ATM Optimized
+    Topology List For Mesh = /TOPOLOGY SET
+    Use Isogeometric Scheme For Mesh Inside GGI Tip = true
+  END
+  EDGE SPLIT CONTROL:Blade 1 Boundary Layer Control
+    Actual Edge Count = 8
+    Base Edge Count = 4
+    Boundary Layer Name = Blade 1
+    Chain Edge Index = 0
+    Edge Name = Edge 36 37
+    Split Factor = 3
+    Target First Element Offset = 0.00694833 [cm]
+    Target First Element YPlus = 24.7282
+  END
+END
+""", "MeshState": """MESH ANALYSIS:
+  MESH LIMITS:
+    MESH MEASURE LIMIT:Connectivity Number
+      Max Limit = 12
+      Min Limit = 0
+      Option = Maximum
+    END
+    MESH MEASURE LIMIT:Element Volume Ratio
+      Max Limit = 20
+      Min Limit = 0
+      Option = Maximum
+    END
+    MESH MEASURE LIMIT:Edge Length Ratio
+      Max Limit = 1000
+      Min Limit = 0
+      Option = Maximum
+    END
+    MESH MEASURE LIMIT:Minimum Face Angle
+      Max Limit = 165 [degree]
+      Min Limit = 15 [degree]
+      Option = Minimum
+    END
+    MESH MEASURE LIMIT:Maximum Face Angle
+      Max Limit = 165 [degree]
+      Min Limit = 15 [degree]
+      Option = Maximum
+    END
+    MESH MEASURE LIMIT:Minimum Volume
+      Max Limit = 0
+      Min Limit = 0
+      Option = Minimum
+    END
+  END
+END
+MESH ANALYSIS:
+  VOLUME:Show Limits
+    Colour = 1, 0, 0
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Inclusive = On
+    Instancing Transform = /Default Transform
+    Isovolume Intersection Mode = Below Value
+    Option = Isovolume
+    Surface Drawing = Smooth Shading
+    Value 1 = 15 [degree]
+    Value 2 = 0
+    Variable Boundary Values = Conservative
+    Visibility = Off
+    Volume Intersection Mode = Intersection
+  END
+END
+MESH DISPLAY:
+  Mesh Data to Mesh Display Link = /MESH DATA
+  SURFACE GROUP:HUB
+    Colour = 0, 0.3333, 1.0
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:HUB
+    Visibility = off
+  END
+  SURFACE GROUP:SHROUD
+    Colour = 0.6667, 0.3333, 1.0
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:SHROUD
+    Visibility = off
+  END
+  SURFACE GROUP:INLET
+    Colour = 0, 1.0, 0
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:INLET
+    Visibility = off
+  END
+  SURFACE GROUP:OUTLET
+    Colour = 1.0, 0, 0
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:OUTLET
+    Visibility = off
+  END
+  SURFACE GROUP:LOWBLADE
+    Colour = 0.5, 0.5, 0.5
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:LOWBLADE
+    Visibility = off
+  END
+  SURFACE GROUP:HIGHBLADE
+    Colour = 0.5, 0.5, 0.5
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:HIGHBLADE
+    Visibility = off
+  END
+  SURFACE GROUP:BLADE TE
+    Colour = 0.5, 0.5, 0.5
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:BLADE TE
+    Visibility = off
+  END
+  SURFACE GROUP:LOWPERIODIC
+    Colour = 1.0, 1.0, 0
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:LOWPERIODIC
+    Visibility = off
+  END
+  SURFACE GROUP:HIGHPERIODIC
+    Colour = 1.0, 1.0, 0
+    Colour Mode = Constant
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Location List = /BOUNDARY:HIGHPERIODIC
+    Visibility = off
+  END
+  TURBO SURFACE:Show Mesh
+    Colour = 1.0, 0.6667, 0
+    Colour Mode = Constant
+    Colour Variable Boundary Values = Conservative
+    Domain List = /All Domains
+    Draw Faces = true
+    Draw Lines = true
+    Line Colour Mode = Default
+    Value = 8
+    Variable = /SCALAR VARIABLE:K
+    Variable Boundary Values = Conservative
+    Visibility = On
+  END
+END
+""", "ViewsState": """VIEW:View 1
+  Axis Visibility = true
+  Camera Mode = User Specified
+  Coord Transform = Cartesian
+  Highlight Type = Wireframe
+  Ruler Visibility = true
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pan = 0,0
+    Pivot Point = -0.116791,3.0045,-1.68257
+    Rotation = 45, -35.26439, -30
+    Rotation Quaternion = 0.279848,-0.364705,-0.115917,0.880476
+    Scale = 0.113321
+    Send To Viewer = true
+  END
+END
+VIEW:View 2
+  Coord Transform = 2D Blade-to-blade
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Rotation Quaternion = 0, 0, -0.707107, 0.707107
+    Send To Viewer = true
+  END
+END
+VIEW:View 3
+  Coord Transform = 2D Meridional
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Rotation Quaternion = -0.707107, 0, 0, 0.707107
+    Send To Viewer = true
+  END
+END
+VIEW:View 4
+  Coord Transform = 3D Turbo
+  CAMERA:
+    Option = Pivot Point and Rotation
+    Rotation = 45, -35.26439, -30
+    Send To Viewer = true
+  END
+END
+VIEW:Imported Geometry
+  Coord Transform = Cartesian
+  Object Visibility List = /GEOMETRY/CAD/GEOMETRY DISPLAY INSTANCE:Highlight, /GEOMETRY/CAD/GEOMETRY DISPLAY INSTANCE:Highlight/POINT DISPLAY:geometry
+  Use Object Visibility List = on
+  CAMERA:
+    Option = Pivot Point and Rotation
+    Rotation = 45, -35.26439, -30
+    Send To Viewer = true
+  END
+END
+""", "IsMeshAvailable": True, "BadVolumesExist": False, "BadAnglesExist": False, "IsUpstreamGeometryCAD": False, "FlowPathBladeRows": {}, "FPUserNameToName": []}</member-data>
+        <custom-data>
+          <DataSource1 valType="String">Blade Design</DataSource1>
+          <EntityType1 valType="String">TurboGeometry</EntityType1>
+          <value-keys valType="String">{"DataSource1": System.String, "EntityType1": System.String}</value-keys>
+        </custom-data>
+      </Object>
+      <Object Name="/Turbo Mesh/TurboMesh:Turbo Mesh Provider" Version="1.0">
+        <class-type valType="String">TurboMesh</class-type>
+        <object-name valType="String">Turbo Mesh Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh Provider", "DataSourceRef": $$3e7e3fb7-33fd-4f40-b06d-9313b4696615}</member-data>
+      </Object>
+      <Object Name="/Turbo Mesh/CFXMesh:Turbo Mesh Provider" Version="1.0">
+        <class-type valType="String">CFXMesh</class-type>
+        <object-name valType="String">Turbo Mesh Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh Provider", "DataSourceRef": $$3e7e3fb7-33fd-4f40-b06d-9313b4696615, "DataConnections": {"16a5fe03-96ff-426c-acde-654d9ded1776": "CFXMesh"}}</member-data>
+      </Object>
+      <Object Name="/Turbo Mesh/FluentImportable:Turbo Mesh Provider" Version="1.0">
+        <class-type valType="String">FluentImportable</class-type>
+        <object-name valType="String">Turbo Mesh Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh Provider", "DataSourceRef": $$3e7e3fb7-33fd-4f40-b06d-9313b4696615, "DataConnections": {}, "FileType": "Cgns", "Dimension": 3}</member-data>
+      </Object>
+      <Object Name="/Turbo Mesh/GeometryDataLink:Blade Design Provider" Version="1.0">
+        <class-type valType="String">GeometryDataLink</class-type>
+        <object-name valType="String">Blade Design Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design Provider", "Entity": $$c6096710-4771-4e7f-9d87-919a458f70d0, "DataType": "INFFile", "ConnectionKey": "83cd7cf2-de1d-4f2b-95f0-dc39a919e74d", "RefreshTimestamp": 2170, "DataEntityType": "TurboGeometry"}</member-data>
+      </Object>
+      <Object Name="/Turbo Mesh/ExternalFileDataObjectType:External File" Version="1.0">
+        <class-type valType="String">ExternalFileDataObjectType</class-type>
+        <object-name valType="String">External File</object-name>
+        <member-data valType="String">{"DisplayText": "External File", "ArchiveOption": "Always", "RequiredForDownstreamInput": False, "FileReference": $$ea357e12-f478-4b46-ab18-9b495ba9474e, "LastKnownAbsoluteFilePath": r"C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\dp0\BG\TS\BG_hub.curve"}</member-data>
+      </Object>
+      <Object Name="/Turbo Mesh/ExternalFileDataObjectType:External File 1" Version="1.0">
+        <class-type valType="String">ExternalFileDataObjectType</class-type>
+        <object-name valType="String">External File 1</object-name>
+        <member-data valType="String">{"DisplayText": "External File", "ArchiveOption": "Always", "RequiredForDownstreamInput": False, "FileReference": $$55e81f53-fd8a-4f26-9ffc-f1fbd3319dd8, "LastKnownAbsoluteFilePath": r"C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\dp0\BG\TS\BG_shroud.curve"}</member-data>
+      </Object>
+      <Object Name="/Turbo Mesh/ExternalFileDataObjectType:External File 2" Version="1.0">
+        <class-type valType="String">ExternalFileDataObjectType</class-type>
+        <object-name valType="String">External File 2</object-name>
+        <member-data valType="String">{"DisplayText": "External File", "ArchiveOption": "Always", "RequiredForDownstreamInput": False, "FileReference": $$657644e6-2ce4-4f23-9f50-bf3c268d48b7, "LastKnownAbsoluteFilePath": r"C:\Users\wenji\AppData\Local\Temp\WB_DESKTOP-5S5OJMK_wenji_3128_2\unsaved_project_files\dp0\BG\TS\BG_profile.curve"}</member-data>
+      </Object>
+    </Container>
+    <Container Name="Setup" Version="1.0">
+      <container-type valType="String">Ansys.CFX.CFXCore.CFXCoreAddin:CFXSetupContainer</container-type>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">2188</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 2164, "Input": 2187, "Output": 1970}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Scopes": 0, "Blade Design": 2170, "Turbo Mesh": 2177, "Setup": 2183, "Solution": 0, "Results": 0}</last-update-regen-times>
+      <unique-system-dir valType="String">CFX</unique-system-dir>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
+      <Object Name="/Setup/CFXSetupProperties:Setup Source" Version="1.0">
+        <class-type valType="String">CFXSetupProperties</class-type>
+        <object-name valType="String">Setup Source</object-name>
+        <member-data valType="String">{"DisplayText": "Setup Source", "DataLinks": {"$$2722401f-d62a-42b8-8899-6e72c844af63": $$0f9385cd-dfed-4ab8-a7af-4256c114f932}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "ExternalFileMap": {}, "InitCCL": None, "UseInitCCL": False, "DEFFileTimeStamp": 2188, "SolverInputExtendedFiles": [], "CachedANSYSInputFile": None, "PhysicsStatus": """INFORMATION:
+Automatic generation of default domains is not currently active. This feature can be activated via either the 'Edit &gt; Options &gt; CFX-Pre &gt; General' editor or the 'Case Options &gt; General' editor in the outline tree.
+
+""", "AllowAssemblyMeshImport": False, "PhysicsErrSuppressEnabled": False, "PhysicsStatusSummary": "", "ANSYSInputPendingDelete": False, "DeletedMeshIDs": [], "NextMeshID": 2, "SolverInputFile": $$bf61a5f2-8d22-48a1-b0d6-2aa4ea45621f, "CaseFile": $$88c199b1-df5d-4ec7-935f-b467730f2951}</member-data>
+        <custom-data>
+          <DataSource1 valType="String">Turbo Mesh</DataSource1>
+          <EntityType1 valType="String">CFXMesh</EntityType1>
+          <DataSource2 valType="String">Setup</DataSource2>
+          <EntityType2 valType="String">CFXMesh</EntityType2>
+          <DataSource3 valType="String">Setup</DataSource3>
+          <EntityType3 valType="String">SimulationGeneratedMesh</EntityType3>
+          <DataSource4 valType="String">Setup</DataSource4>
+          <EntityType4 valType="String">MechanicalSetup</EntityType4>
+          <value-keys valType="String">{"DataSource1": System.String, "EntityType1": System.String, "DataSource2": System.String, "EntityType2": System.String, "DataSource3": System.String, "EntityType3": System.String, "DataSource4": System.String, "EntityType4": System.String}</value-keys>
+        </custom-data>
+      </Object>
+      <Object Name="/Setup/CFXSetup:Setup Provider" Version="1.0">
+        <class-type valType="String">CFXSetup</class-type>
+        <object-name valType="String">Setup Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Setup Provider", "DataSourceRef": $$e1365716-89fc-4fe2-8c2b-f516455029b8, "DataConnections": {"fcbad11a-a809-4567-987e-c03c4121df27": None}, "CFXSolverInputFile": $$bf61a5f2-8d22-48a1-b0d6-2aa4ea45621f, "MAPDLSolverInputFile": None}</member-data>
+      </Object>
+      <Object Name="/Setup/SystemCouplingSetupData:Setup Coupling Data" Version="1.0">
+        <class-type valType="String">SystemCouplingSetupData</class-type>
+        <object-name valType="String">Setup Coupling Data</object-name>
+        <member-data valType="String">{"DisplayText": "Setup Coupling Data", "DataConnections": [], "TransferDataObject": None}</member-data>
+      </Object>
+      <Object Name="/Setup/PersistedSystemCouplingData:PersistedSystemCouplingData" Version="1.0">
+        <class-type valType="String">PersistedSystemCouplingData</class-type>
+        <object-name valType="String">PersistedSystemCouplingData</object-name>
+        <member-data valType="String">{"DisplayText": "PersistedSystemCouplingData", "Xml": "", "ParticipantName": ""}</member-data>
+      </Object>
+      <Object Name="/Setup/CFXMeshDataLink:Turbo Mesh Provider" Version="1.0">
+        <class-type valType="String">CFXMeshDataLink</class-type>
+        <object-name valType="String">Turbo Mesh Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh Provider", "Entity": $$2722401f-d62a-42b8-8899-6e72c844af63, "DataType": "CFXMesh", "ConnectionKey": "16a5fe03-96ff-426c-acde-654d9ded1776", "RefreshTimestamp": 2177, "ID": 1}</member-data>
+      </Object>
+    </Container>
+    <Container Name="Solution" Version="1.0">
+      <container-type valType="String">Ansys.CFX.CFXCore.CFXCoreAddin:CFXSolutionContainer</container-type>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1997, "Input": 1991, "Output": 1986}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{"Preferences": 0, "ToolbarExp": 0, "FileTypesContainer": 0, "FileContainer": 0, "Messages": 0, "Parameters": 0, "Schematic": 0, "ReportDataContainer": 0, "Graphics": 0, "Units": 0, "Scopes": 0, "Blade Design": 2170, "Turbo Mesh": 2177, "Setup": 2188, "Solution": 0, "Results": 0}</last-update-regen-times>
+      <unique-system-dir valType="String">CFX</unique-system-dir>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
+      <Object Name="/Solution/CFXSolutionProperties:Solution Source" Version="1.0">
+        <class-type valType="String">CFXSolutionProperties</class-type>
+        <object-name valType="String">Solution Source</object-name>
+        <member-data valType="String">{"DisplayText": "Solution Source", "DataLinks": {"$$442f8dd0-4b81-4e89-b1a5-897b30766f8c": $$8415620b-8522-4440-908a-30ca69dfdee3}, "UpstreamContainersRemovedSinceRefresh": False, "State": "Modified", "ForceRefresh": False, "ExternalFileMap": {}, "InitCCL": None, "UseInitCCL": False, "CurrentResultsRef": None, "RunDirectory": "", "UpstreamExecutionControlCCL": "", "InitializationOption": "CurrentSolutionData", "CacheSolutionData": False, "KeepLatestSolutionOnly": True, "ExecutionControlOption": "IssueWarning", "HaveExecutionControlConflict": False, "LoadMResOptions": "LastConfigOnly", "FailedRun": None, "SolverPath": "", "SolverArguments": "", "ExecutionControlCCL": "", "SolverCommandMode": "Foreground"}</member-data>
+        <custom-data>
+          <DataSource1 valType="String">Setup</DataSource1>
+          <EntityType1 valType="String">CFXSetup</EntityType1>
+          <value-keys valType="String">{"DataSource1": System.String, "EntityType1": System.String}</value-keys>
+        </custom-data>
+      </Object>
+      <Object Name="/Solution/ComponentSolveSettingsForAddin:ComponentSolveSettingsForAddin" Version="1.0">
+        <class-type valType="String">ComponentSolveSettingsForAddin</class-type>
+        <object-name valType="String">ComponentSolveSettingsForAddin</object-name>
+        <member-data valType="String">{"DisplayText": "ComponentSolveSettingsForAddin", "UpdateOption": "Foreground", "PortalConnection": {"OptionIcons": None, "OptionLabels": "", "Options": "", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": None}, "PortalQueue": {"OptionIcons": None, "OptionLabels": "", "Options": "", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": None}, "RsmUserString": None, "SolveManager": {"OptionIcons": None, "OptionLabels": "localhost", "Options": "localhost", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": "localhost"}, "Queue": {"OptionIcons": None, "OptionLabels": "Local", "Options": "Local", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": "Local"}, "ConfiguredQueue": {"OptionIcons": None, "OptionLabels": "Local", "Options": "Local", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": "Local"}, "RsmJobName": "Workbench", "EnablePolling": True, "PollingInterval": "120 [s]", "ExecutionMode": "Serial", "NumberOfProcesses": 2}</member-data>
+      </Object>
+      <Object Name="/Solution/ExpertProperties:ExpertProperties" Version="1.0">
+        <class-type valType="String">ExpertProperties</class-type>
+        <object-name valType="String">ExpertProperties</object-name>
+        <member-data valType="String">{"DisplayText": "ExpertProperties", "ImportantNote": "These options are visible because a development environment variable is set", "ExpertPropertiesString": "", "EnableDebug": False, "EnableValidation": False, "EnableTesting": False, "EnableErrorReporting": True, "EnableWarningReporting": True, "EnableInfoReporting": False, "EnableFileBasedCommunication": False, "EnableSocketCommunication": False, "EnableFailureCauseReporting": True}</member-data>
+      </Object>
+      <Object Name="/Solution/ComponentSettingsForRsmDpUpdate:ComponentSettingsForRsmDpUpdate" Version="1.0">
+        <class-type valType="String">ComponentSettingsForRsmDpUpdate</class-type>
+        <object-name valType="String">ComponentSettingsForRsmDpUpdate</object-name>
+        <member-data valType="String">{"DisplayText": "ComponentSettingsForRsmDpUpdate", "SerialOnly": False, "UseLimitOnNumberOfCores": False, "LimitOnNumberOfCores": 2}</member-data>
+      </Object>
+      <Object Name="/Solution/CFXSolution:Solution Provider" Version="1.0">
+        <class-type valType="String">CFXSolution</class-type>
+        <object-name valType="String">Solution Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Solution Provider", "DataSourceRef": $$f21f4d96-98e7-4d57-b27c-532498a4e8a6, "DataConnections": {"bb28706d-ac8d-4f4c-a37f-f5b9ec1bf185": None}}</member-data>
+      </Object>
+      <Object Name="/Solution/CFXSolutionData:Solution Provider" Version="1.0">
+        <class-type valType="String">CFXSolutionData</class-type>
+        <object-name valType="String">Solution Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Solution Provider", "DataSourceRef": $$f21f4d96-98e7-4d57-b27c-532498a4e8a6, "DataConnections": {}}</member-data>
+      </Object>
+      <Object Name="/Solution/CFXSetupDataLink:Setup Provider" Version="1.0">
+        <class-type valType="String">CFXSetupDataLink</class-type>
+        <object-name valType="String">Setup Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Setup Provider", "Entity": $$442f8dd0-4b81-4e89-b1a5-897b30766f8c, "DataType": None, "ConnectionKey": "fcbad11a-a809-4567-987e-c03c4121df27", "RefreshTimestamp": 2188}</member-data>
+      </Object>
+    </Container>
+    <Container Name="Results" Version="1.0">
+      <container-type valType="String">Ansys.CFX.CFDPost.CFDPostAddin:CFDAnalysisContainer</container-type>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 2013, "Input": 2008, "Output": 2007}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <last-update-regen-times valType="String">{}</last-update-regen-times>
+      <unique-system-dir valType="String">CFX</unique-system-dir>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/Results/CFDResults:Results Source" Version="1.0">
+        <class-type valType="String">CFDResults</class-type>
+        <object-name valType="String">Results Source</object-name>
+        <member-data valType="String">{"DisplayText": "Results Source", "DataLinks": {"$$c6f1fecf-3c13-49e7-afae-554d7f305954": $$890d3fda-c2cf-4535-9d65-d5348954fc7e}, "UpstreamContainersRemovedSinceRefresh": False, "State": "UpToDate", "ForceRefresh": False, "ExternalFileMap": {}, "InitCCL": None, "UseInitCCL": False, "PostStateFile": None, "_reportFiles": None, "_htmlReportFile": None, "_xmlReportFile": None, "MRESLoadOptionsMsg": "See Solution component properties for multi-configuration options (CFX only).", "ClearState": False, "LoadReport": "None", "CustomReportTemplate": "", "RunSessionScript": False, "UpdateScriptCCL": "", "StateInitializationFile": "", "GenerateReport": False, "ReportName": "Report", "ReportLocationDirectory": "", "LastResultsID": 2}</member-data>
+        <custom-data>
+          <DataSource1 valType="String">Solution</DataSource1>
+          <EntityType1 valType="String">CFXSolution</EntityType1>
+          <value-keys valType="String">{"DataSource1": System.String, "EntityType1": System.String}</value-keys>
+        </custom-data>
+      </Object>
+      <Object Name="/Results/CFDAnalysis:Results Provider" Version="1.0">
+        <class-type valType="String">CFDAnalysis</class-type>
+        <object-name valType="String">Results Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Results Provider", "DataSourceRef": $$71dcc872-58a6-4139-9bf2-4c862d98f028}</member-data>
+      </Object>
+      <Object Name="/Results/SolutionDataLink:Solution Provider" Version="1.0">
+        <class-type valType="String">SolutionDataLink</class-type>
+        <object-name valType="String">Solution Provider</object-name>
+        <member-data valType="String">{"DisplayText": "Solution Provider", "Entity": $$c6f1fecf-3c13-49e7-afae-554d7f305954, "DataType": "CFXSolution", "ConnectionKey": "bb28706d-ac8d-4f4c-a37f-f5b9ec1bf185", "RefreshTimestamp": 0, "ID": 1, "SecondID": 2, "DataEntityType": "CFXSolution", "SystemName": "", "LastFilename": {}}</member-data>
+      </Object>
+    </Container>
+  </Containers>
+</Storage>

@@ -1,0 +1,2 @@
+set path=%path%;bladegen_set_path
+BladeBatch filenamebgibatch filenamebgdbatch filenamertztbatch

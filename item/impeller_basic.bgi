@@ -1,0 +1,371 @@
+Begin Defaults
+End Defaults
+
+Begin Equations
+End Equations
+
+Begin Model
+	NumMainBlades=6
+	Mode=Angle/Thickness
+	LeftHandedCoordSystem
+
+	OutputBladePoints
+	BladeOutputPointClustering=BothEnds
+	NumBladePoints=60
+	NumLeadingEdgePoints=9
+	NumTrailingEdgePoints=9
+
+	CurveDisplayMaximumError=0.1083440000
+
+	DataFromLeToTe
+	BetaAxialDef
+	ThicknessIsDimension
+
+	MeridionalSpanCurveRuledShape=RuledElementOnly
+
+	Designer="sunqin"
+	Company=""
+	Comment=""
+	DeviceType=Pump
+	ConfigurationType=Radial
+	RotationType=Negative
+	GeometryUnits=MM
+End Model
+
+Begin Meridional
+	MeridionalControlCurveMode=Normal
+	SpanByGeom
+	Begin HubCurve
+		New Segment
+			CurveType=Spline
+			UpstreamControl=Free
+			Begin Data
+				( -39.00000000,2.034000000 )
+				( -37.55800000,3.095000000 )
+				( -36.81900000,5.165000000 )
+				( -35.54200000,6.974000000 )
+				( -33.97200000,8.537000000 )
+				( -32.20100000,9.867000000 )
+				( -30.31600000,11.03200000 )
+				( -28.33200000,12.02000000 )
+				( -26.25800000,12.80000000 )
+				( -24.11000000,13.34200000 )
+				( -21.92200000,13.69400000 )
+				( -19.72000000,13.94900000 )
+				( -17.51800000,14.20200000 )
+				( -15.32700000,14.54400000 )
+				( -13.15800000,14.99900000 )
+				( -11.00100000,15.50600000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+		New Segment
+			CurveType=Spline
+			UpstreamControl=Free
+			Begin Data
+				( -11.00100000,15.50600000 )
+				( -9.938000000,16.14700000 )
+				( -8.427000000,17.18500000 )
+				( -6.974000000,18.30000000 )
+				( -5.580000000,19.49000000 )
+				( -4.251000000,20.75100000 )
+				( -2.990000000,22.08000000 )
+				( -1.800000000,23.47400000 )
+				( -0.6840000000,24.92800000 )
+				( 0.3540000000,26.43800000 )
+				( 1.311000000,28.00000000 )
+				( 2.185000000,29.61100000 )
+				( 2.974000000,31.26400000 )
+				( 3.675000000,32.95700000 )
+				( 4.287000000,34.68500000 )
+				( 4.808000000,36.44200000 )
+				( 5.235000000,38.22300000 )
+				( 5.569000000,40.02500000 )
+				( 5.808000000,41.84200000 )
+				( 5.952000000,43.66800000 )
+				( 6.000000000,45.50000000 )
+				( 6.000000000,46.88400000 )
+				( 6.000000000,48.26700000 )
+				( 6.000000000,49.65000000 )
+				( 6.000000000,51.03400000 )
+				( 6.000000000,52.41700000 )
+				( 6.000000000,53.80000000 )
+				( 6.000000000,55.18400000 )
+				( 6.000000000,56.56700000 )
+				( 6.000000000,57.95000000 )
+				( 6.000000000,59.33400000 )
+				( 6.000000000,60.71700000 )
+				( 6.000000000,62.10000000 )
+				( 6.000000000,63.48400000 )
+				( 6.000000000,64.86700000 )
+				( 6.000000000,66.25000000 )
+				( 6.000000000,67.63400000 )
+				( 6.000000000,69.01700000 )
+				( 6.000000000,70.40000000 )
+				( 6.000000000,71.78400000 )
+				( 6.000000000,73.16700000 )
+				( 6.000000000,74.55000000 )
+				( 6.000000000,75.93400000 )
+				( 6.000000000,77.31700000 )
+				( 6.000000000,78.70000000 )
+				( 6.000000000,80.08400000 )
+				( 6.000000000,81.46700000 )
+				( 6.000000000,82.85000000 )
+				( 6.000000000,84.23400000 )
+				( 6.000000000,87.00000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+		New Segment
+			CurveType=Bezier
+			UpstreamControl=Free
+			Begin Data
+				( 6.000000000,87.00000000 )
+				( 6.000000000,88.50000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+	End HubCurve
+	Begin ShroudCurve
+		New Segment
+			CurveType=Bezier
+			UpstreamControl=Free
+			Begin Data
+				( -39.00000000,37.00000000 )
+				( -38.00000000,37.00000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+		New Segment
+			CurveType=Spline
+			UpstreamControl=Free
+			Begin Data
+				( -38.00000000,37.00000000 )
+				( -37.28100000,37.00000000 )
+				( -35.56200000,37.00000000 )
+				( -33.84300000,37.00000000 )
+				( -32.12400000,37.00000000 )
+				( -30.40500000,37.00000000 )
+				( -28.68600000,37.00000000 )
+				( -26.96700000,37.00000000 )
+				( -25.24800000,37.00000000 )
+				( -23.52900000,37.00000000 )
+				( -21.81000000,37.00000000 )
+				( -20.90300000,37.03200000 )
+				( -20.00100000,37.12700000 )
+				( -19.10700000,37.28400000 )
+				( -18.22700000,37.50400000 )
+				( -17.36400000,37.78400000 )
+				( -16.52200000,38.12400000 )
+				( -15.70700000,38.52200000 )
+				( -14.92100000,38.97600000 )
+				( -14.16900000,39.48300000 )
+				( -13.45400000,40.04200000 )
+				( -12.77900000,40.64900000 )
+				( -12.14900000,41.30200000 )
+				( -11.56600000,41.99700000 )
+				( -11.03300000,42.73100000 )
+				( -10.55200000,43.50000000 )
+				( -10.12600000,44.30200000 )
+				( -9.757000000,45.13000000 )
+				( -9.446000000,45.98300000 )
+				( -9.196000000,46.85500000 )
+				( -9.008000000,47.74300000 )
+				( -8.811000000,48.87800000 )
+				( -8.621000000,50.01400000 )
+				( -8.437000000,51.15100000 )
+				( -8.260000000,52.28900000 )
+				( -8.090000000,53.42800000 )
+				( -7.927000000,54.56800000 )
+				( -7.770000000,55.70900000 )
+				( -7.619000000,56.85100000 )
+				( -7.476000000,57.99400000 )
+				( -7.339000000,59.13700000 )
+				( -7.208000000,60.28200000 )
+				( -7.085000000,61.42700000 )
+				( -6.967000000,62.57300000 )
+				( -6.857000000,63.71900000 )
+				( -6.753000000,64.86600000 )
+				( -6.656000000,66.01400000 )
+				( -6.566000000,67.16200000 )
+				( -6.482000000,68.31100000 )
+				( -6.405000000,69.46000000 )
+				( -6.335000000,70.61000000 )
+				( -6.271000000,71.76000000 )
+				( -6.214000000,72.91000000 )
+				( -6.164000000,74.06100000 )
+				( -6.121000000,75.21200000 )
+				( -6.084000000,76.36300000 )
+				( -6.054000000,77.51400000 )
+				( -6.030000000,78.66600000 )
+				( -6.013000000,79.81700000 )
+				( -6.003000000,80.96900000 )
+				( -6.000000000,82.12100000 )
+				( -6.000000000,83.09700000 )
+				( -6.000000000,84.07300000 )
+				( -6.000000000,85.04800000 )
+				( -6.000000000,86.02400000 )
+				( -6.000000000,87.00000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+		New Segment
+			CurveType=Bezier
+			UpstreamControl=Free
+			Begin Data
+				( -6.000000000,87.00000000 )
+				( -6.000000000,88.50000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+	End ShroudCurve
+	Begin InletCurve
+		New Segment
+			CurveType=Bezier
+			UpstreamControl=Free
+			Begin Data
+				( -39.00000000,2.034000000 )
+				( -39.00000000,37.00000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+	End InletCurve
+	Begin ExhaustCurve
+		New Segment
+			CurveType=Bezier
+			UpstreamControl=Free
+			Begin Data
+				( 6.000000000,88.50000000 )
+				( -6.000000000,88.50000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+	End ExhaustCurve
+	Begin LeadingEdgeCurve
+		New Segment
+			CurveType=Spline
+			UpstreamControl=Free
+			Begin Data
+				( -4.351577443,20.65083816 )
+				( -7.545000000,23.06400000 )
+				( -10.67900000,25.55000000 )
+				( -13.69800000,28.17500000 )
+				( -16.53900000,30.98900000 )
+				( -19.22100000,33.95800000 )
+				( -21.81980802,36.99986995 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+	End LeadingEdgeCurve
+	Begin TrailingEdgeCurve
+		New Segment
+			CurveType=Bezier
+			UpstreamControl=Free
+			Begin Data
+				( 6.000000000,87.00000000 )
+				( -6.000000000,87.00000000 )
+			End Data
+			DownstreamControl=Free
+		End Segment
+	End TrailingEdgeCurve
+
+	New SpanLayer
+		Name=Layer1
+		OutputLayer=T
+		SpanFraction=0.0000000000
+	End SpanLayer
+
+	New SpanLayer
+		Name=Layer2
+		OutputLayer=T
+		SpanFraction=0.2500000000
+	End SpanLayer
+
+	New SpanLayer
+		Name=Layer3
+		OutputLayer=T
+		SpanFraction=0.5000000000
+	End SpanLayer
+
+	New SpanLayer
+		Name=Layer4
+		OutputLayer=T
+		SpanFraction=0.7500000000
+	End SpanLayer
+
+	New SpanLayer
+		Name=Layer5
+		OutputLayer=T
+		SpanFraction=1.000000000
+	End SpanLayer
+End Meridional
+
+New Blade
+	PitchFraction=0.0000000000
+	LeadingEdgeEndType=Ellipse
+	HubLE_EllipseRatio=2.000000000
+	ShrLE_EllipseRatio=2.000000000
+	TrailingEdgeEndType=CutOff
+	EllipseAtMean=T
+
+	Begin AngleDefinition
+		AngleLocation=MeanLine
+		SpanwiseDistribution=General
+
+		New AngleCurve
+			Layer="Layer3"
+			DefinitionType=BetaCurve
+			HorizDim=PercentMeridionalPrime
+			VertDim=Degree
+
+			LE_Theta=0.0000000000
+			New Segment
+				CurveType=Bezier
+				UpstreamControl=Free
+				Begin Data
+					( 0.0000000000,20.89554161 )
+					( 13.57368067,41.04480568 )
+					( 30.37269291,53.13432975 )
+					( 46.49966340,54.47762930 )
+					( 63.97071741,54.47762930 )
+					( 82.91979442,62.08914443 )
+					( 100.0005953,66.56680960 )
+				End Data
+				DownstreamControl=Free
+			End Segment
+		End AngleCurve
+	End AngleDefinition
+
+	Begin ThicknessDefinition
+		ThicknessType=Normal To Camber Line
+		SpanwiseDistribution=General
+
+		New ThicknessCurve
+			Layer="Layer3"
+			HorizDim=PercentMeridionalPrime
+
+			New Segment
+				CurveType=Bezier
+				UpstreamControl=Free
+				Begin Data
+					( 0.0000000000,1.000000000 )
+					( 23.23552151,2.041520000 )
+					( 41.33887421,2.802770000 )
+					( 65.28314804,2.932530000 )
+					( 82.97095601,2.967130000 )
+					( 89.75286584,2.397360000 )
+					( 100.0000005,1.531140000 )
+				End Data
+				DownstreamControl=Free
+			End Segment
+		End ThicknessCurve
+	End ThicknessDefinition
+End Blade
+
+Begin PlusData
+Begin Case
+Machine Type = pump
+Component Type = rotor
+Units = MM
+End Case
+End PlusData

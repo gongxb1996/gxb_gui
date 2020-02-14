@@ -1,0 +1,23 @@
+﻿# encoding: utf-8
+# Release 18.0
+SetScriptVersion(Version="18.0.351")
+Open(FilePath="current_name_wbpj/centrifugal_impeller.wbpj")
+Save(
+    FilePath="reference_path_name_wbpj/reference_name_wbpj",
+    Overwrite=True)
+system1 = GetSystem(Name="BG")
+bladeDesignComponent1 = system1.GetComponent(Name="Blade Design")
+bladeDesignComponent1.Clean()
+bladeDesignComponent1.Reset()
+bladeDesign1 = system1.GetContainer(ComponentName="Blade Design")
+bladeDesign1.Import(FilePath="reference_path_name_wbpj/bladegen_reference_impeller")
+system2 = GetSystem(Name="TS")
+turboMeshComponent1 = system2.GetComponent(Name="Turbo Mesh")
+turboMeshComponent1.Refresh()
+turboMeshComponent1.Update(AllDependencies=True)
+system3 = GetSystem(Name="CFX")
+setupComponent1 = system3.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+solutionComponent1 = system3.GetComponent(Name="Solution")
+solutionComponent1.Refresh()
+Save(Overwrite=True)

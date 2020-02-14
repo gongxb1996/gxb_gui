@@ -1,0 +1,1 @@
+"D:\Program Files\ANSYS Inc\v180\CFX\bin\cfx5mondata.exe" -res filenameres -varrule "CATEGORY = USER POINT" -out filenamecsv

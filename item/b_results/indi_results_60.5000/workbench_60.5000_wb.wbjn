@@ -1,0 +1,23 @@
+﻿# encoding: utf-8
+# Release 18.0
+SetScriptVersion(Version="18.0.351")
+Open(FilePath="E:/PyCharm 2019.3.1/gxb_gui/item/centrifugal_impeller.wbpj")
+Save(
+    FilePath="E:/PyCharm 2019.3.1/gxb_gui/item/b_results/indi_results_60.5000/workbench_60.5000_wb.wbpj",
+    Overwrite=True)
+system1 = GetSystem(Name="BG")
+bladeDesignComponent1 = system1.GetComponent(Name="Blade Design")
+bladeDesignComponent1.Clean()
+bladeDesignComponent1.Reset()
+bladeDesign1 = system1.GetContainer(ComponentName="Blade Design")
+bladeDesign1.Import(FilePath="E:/PyCharm 2019.3.1/gxb_gui/item/b_results/indi_results_60.5000/bladegen_impeller_60.5000.bgd")
+system2 = GetSystem(Name="TS")
+turboMeshComponent1 = system2.GetComponent(Name="Turbo Mesh")
+turboMeshComponent1.Refresh()
+turboMeshComponent1.Update(AllDependencies=True)
+system3 = GetSystem(Name="CFX")
+setupComponent1 = system3.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+solutionComponent1 = system3.GetComponent(Name="Solution")
+solutionComponent1.Refresh()
+Save(Overwrite=True)

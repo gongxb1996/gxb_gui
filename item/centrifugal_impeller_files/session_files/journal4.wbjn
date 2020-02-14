@@ -1,0 +1,54 @@
+﻿# encoding: utf-8
+# Release 18.0
+SetScriptVersion(Version="18.0.351")
+system1 = GetSystem(Name="CFX")
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0.0169835, -0.0412771, -0.0211918
+    Scale = 12.6824
+    Pan = 0, 0
+    Rotation Quaternion = -0.179261, 0.900919, -0.376374, -0.120541
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = High Resolution
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Maximum Number of Iterations = 300
+      Minimum Number of Iterations = 1
+      Physical Timescale = Physical timescale
+      Timescale Control = Physical Timescale
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-08
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+Save(Overwrite=True)
+solutionComponent1 = system1.GetComponent(Name="Solution")
+solutionComponent1.Refresh()
+Save(Overwrite=True)

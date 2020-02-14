@@ -1,0 +1,1 @@
+"D:\Program Files\ANSYS Inc\v180\CFX\bin\cfx5solve.exe" -batch -def filenamedef -par-local -partition 1  -fullname filenamerespath

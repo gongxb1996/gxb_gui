@@ -1,0 +1,2 @@
+set path=%path%;D:\Program Files\ANSYS Inc\v180\aisol\BladeModeler\BladeGen
+BladeBatch filenamebgibatch filenamebgdbatch filenamertztbatch

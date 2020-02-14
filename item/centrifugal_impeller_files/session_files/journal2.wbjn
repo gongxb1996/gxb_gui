@@ -1,0 +1,11 @@
+﻿# encoding: utf-8
+# Release 18.0
+SetScriptVersion(Version="18.0.351")
+system1 = GetSystem(Name="BG")
+bladeDesign1 = system1.GetContainer(ComponentName="Blade Design")
+bladeDesign1.Edit()
+bladeDesign1.Exit()
+system2 = GetSystem(Name="CFX")
+solutionComponent1 = system2.GetComponent(Name="Solution")
+solutionComponent1.Refresh()
+Save(Overwrite=True)

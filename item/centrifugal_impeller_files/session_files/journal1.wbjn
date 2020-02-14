@@ -1,0 +1,1057 @@
+﻿# encoding: utf-8
+# Release 18.0
+SetScriptVersion(Version="18.0.351")
+template1 = GetTemplate(TemplateName="BladeGen")
+system1 = template1.CreateSystem()
+template2 = GetTemplate(TemplateName="TurboGrid")
+bladeDesignComponent1 = system1.GetComponent(Name="Blade Design")
+componentTemplate1 = GetComponentTemplate(Name="TSMeshTemplate")
+system2 = template2.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=bladeDesignComponent1, TransferName=None, ToComponentTemplate=componentTemplate1)],
+    Position="Right",
+    RelativeTo=system1)
+template3 = GetTemplate(TemplateName="CFX")
+turboMeshComponent1 = system2.GetComponent(Name="Turbo Mesh")
+componentTemplate2 = GetComponentTemplate(Name="CFXPhysicsTemplate")
+system3 = template3.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=turboMeshComponent1, TransferName=None, ToComponentTemplate=componentTemplate2)],
+    Position="Right",
+    RelativeTo=system2)
+bladeDesign1 = system1.GetContainer(ComponentName="Blade Design")
+bladeDesign1.Import(FilePath="D:/DEsktop/yin_pump/impeller02.bgd")
+bladeDesign1.Edit()
+bladeDesign1.Exit()
+turboMesh1 = system2.GetContainer(ComponentName="Turbo Mesh")
+turboMesh1.Edit()
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.110678, 3.08114, -1.60347
+    Scale = 0.11442
+    Pan = 0, 0
+    Rotation Quaternion = 0.397921, -0.916463, 0.0097534, 0.0406896
+    
+  END
+
+END
+
+> update
+GEOMETRY:
+  SEGMENT HIGHLIGHT:
+    Requested Block = 
+    Requested Index = 0
+  END
+END""")
+turboMesh1.SendCommand(Command="""GEOMETRY:
+  SEGMENT HIGHLIGHT:
+    Requested Block = 
+    Requested Index = 0
+  END
+END""")
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.110678, 3.08114, -1.60347
+    Scale = 0.11442
+    Pan = 0, 0
+    Rotation Quaternion = 0.397921, -0.916463, 0.0097534, 0.0406896
+    
+  END
+
+END
+
+> update
+> um mode=normal, object=/TOPOLOGY SET""")
+bladeDesign1.Edit()
+bladeDesign1.Exit()
+turboMeshComponent1.Refresh()
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.110678, 3.08114, -1.60347
+    Scale = 0.11442
+    Pan = 0, 0
+    Rotation Quaternion = 0.314566, -0.935517, 0.0121614, 0.160329
+    
+  END
+
+END
+
+> update
+> setlayerhighlight object=/MESH DATA/EDGE SPLIT CONTROL:Blade 1 Boundary Layer Control""")
+turboMesh1.SendCommand(Command="> setlayerhighlight object=")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.0
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1.56414
+  Between Boundary Layers Number Of Const Elements = 2
+  Between Boundary Layers Number Of Elements = 8
+  Boundary Layer Specification Method = Proportional
+  Global Size Factor = 0.7
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.56414
+  Hub Boundary Layer Number Of Elements = 8
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 200
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.00437479 [cm]
+  Hub Vertex Offset = 0.00210392
+  Hub Vertex YPlus = 15.5693
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = On
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 5
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 14
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 23
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = On
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.47908
+  Shroud Boundary Layer Number Of Elements = 8
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.00437479 [cm]
+  Shroud Vertex Offset = 0.00210392
+  Shroud Vertex YPlus = 15.5693
+  Spanwise Blade Distribution Option = End Ratio
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 50000
+  Vertex Offset Specification Mode = Absolute
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3
+    Target First Element Offset = 0.00441961 [cm]
+    Target First Element YPlus = 15.7288
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.110678, 3.08114, -1.60347
+    Scale = 0.11442
+    Pan = 0, 0
+    Rotation Quaternion = 0.314566, -0.935517, 0.0121614, 0.160329
+    
+  END
+
+END
+
+> update
+GEOMETRY:
+  SEGMENT HIGHLIGHT:
+    Requested Block = 
+    Requested Index = 0
+  END
+END""")
+turboMesh1.SendCommand(Command="""GEOMETRY:
+  SEGMENT HIGHLIGHT:
+    Requested Block = 
+    Requested Index = 0
+  END
+END""")
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.110678, 3.08114, -1.60347
+    Scale = 0.11442
+    Pan = 0, 0
+    Rotation Quaternion = -0.587052, -0.68931, -0.343993, -0.248766
+    
+  END
+
+END
+
+> update
+    GEOMETRY:
+  INLET:
+Generate Intermediate Points = On
+Hub Angle = -21.2457 [deg]
+Input Filename =  
+Opening Mode = Fully extend
+Override Automatic Angles = Off
+Parametric Hub Location = 0.201522
+Parametric Shroud Location = 0.739629
+Shroud Angle = -33.888 [deg]
+Toggle Trim = Off
+Trim AR Location Method = Set A
+Trim Hub Position = -0.039 [m], 0.002034 [m]
+Trim Intersection Point 1 = -0.039 [m], 0.002034 [m]
+Trim Intersection Point 2 = -0.039 [m], 0.037 [m]
+Trim Shroud Position = -0.039 [m], 0.037 [m]
+Use Simple Conic Surface = Off
+    GEO POINT:Low Hub Point
+    Visibility = On
+    END
+    GEO POINT:Low Shroud Point
+      Visibility = On
+    END
+  END
+END""")
+bladeDesign1.Edit()
+bladeDesign1.Exit()
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.110678, 3.08114, -1.60347
+    Scale = 0.11442
+    Pan = 0, 0
+    Rotation Quaternion = -0.587052, -0.68931, -0.343993, -0.248766
+    
+  END
+
+END
+
+> update
+    GEOMETRY:
+  OUTLET:
+Curve Representation = Piece-wise linear
+Generate Intermediate Points = On
+Hub Angle = 48.3631 [deg]
+Input Filename =  
+Input Length Units = mm
+Meridional Splitter Filename =  
+Meridional Splitter Interface Hub Parametric Location = 0.5
+Meridional Splitter Interface Shroud Parametric Location = 0.5
+Opening Mode = Fully extend
+Override Automatic Angles = Off
+Parametric Hub Location = 0.999996
+Parametric Shroud Location = 1
+Shroud Angle = 51.2505 [deg]
+Toggle Trim = Off
+Trim AR Location Method = Set A
+Trim Hub Position = 0.006 [m], 0.0885 [m]
+Trim Intersection Point 1 = 0.006 [m], 0.0885 [m]
+Trim Intersection Point 2 = -0.006 [m], 0.0885 [m]
+Trim Shroud Position = -0.006 [m], 0.0885 [m]
+Use Simple Conic Surface = Off
+    GEO POINT:Low Hub Point
+    Visibility = On
+    END
+    GEO POINT:Low Shroud Point
+      Visibility = On
+    END
+  END
+END""")
+turboMeshComponent1.Refresh()
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -0.110678, 3.08114, -1.60347
+    Scale = 0.11442
+    Pan = 0, 0
+    Rotation Quaternion = -0.32352, -0.870934, 0.369504, -0.0164053
+    
+  END
+
+END
+
+> update
+> setlayerhighlight object=/MESH DATA/EDGE SPLIT CONTROL:Blade 1 Boundary Layer Control""")
+turboMesh1.SendCommand(Command="> setlayerhighlight object=")
+turboMesh1.Exit()
+turboMeshComponent1.Update(AllDependencies=True)
+turboMesh1.Edit()
+turboMesh1.Exit()
+setup1 = system3.GetContainer(ComponentName="Setup")
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0.0158855, 0.0379138, -0.0164932
+    Scale = 17.379
+    Pan = -0.0207432, 0.0130729
+    Rotation Quaternion = 0.489299, 0.769522, -0.170778, -0.373151
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+>importccl filename=D:/DEsktop/yin_pump/CFX_impeller.ccl, mode = replace, autoLoadLibrary = none""")
+setup1.SendCommand(Command=">delete /FLOW:Flow Analysis 1/DOMAIN:b_clearance")
+setup1.SendCommand(Command=">delete /FLOW:Flow Analysis 1/DOMAIN:d_volute")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: c_impeller
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = Passage Main
+    BOUNDARY: if_clearance_impeller_hub Side 2 1
+      Boundary Type = INTERFACE
+      Interface Boundary = t
+      Location = HUB_DOWNSTREAM
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = Conservative Interface Flux
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Conservative Interface Flux
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:if_clearance_impeller_hub Side 2 1
+    BOUNDARY: if_clearance_impeller_radial Side 2 1
+      Boundary Type = INTERFACE
+      Interface Boundary = t
+      Location = IMPELLER_OUTLET
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = Conservative Interface Flux
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Conservative Interface Flux
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:if_clearance_impeller_radial Side 2 1
+    BOUNDARY: if_clearance_impeller_shroud Side 2 1
+      Boundary Type = INTERFACE
+      Interface Boundary = t
+      Location = SHROUD_DOWNSTREAM
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = Conservative Interface Flux
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Conservative Interface Flux
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:if_clearance_impeller_shroud Side 2 1
+    BOUNDARY: if_suction_impeller Side 2 1
+      Boundary Type = INTERFACE
+      Interface Boundary = t
+      Location = IMPELLER_INLET
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = Conservative Interface Flux
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Conservative Interface Flux
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:if_suction_impeller Side 2 1
+    BOUNDARY: impeller_blade01
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = Primitive 2D B
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade01
+    BOUNDARY: impeller_blade02
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = Primitive 2D C
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade02
+    BOUNDARY: impeller_blade03
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = Primitive 2D D
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade03
+    BOUNDARY: impeller_blade04
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = Primitive 2D E
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade04
+    BOUNDARY: impeller_blade05
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = Primitive 2D 2
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade05
+    BOUNDARY: impeller_blade06
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = Primitive 2D A 2
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade06
+    BOUNDARY: impeller_hub
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = IMPELLER_HUB
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_hub
+    BOUNDARY: impeller_shroud
+      Boundary Type = WALL
+      Frame Type = Rotating
+      Location = IMPELLER_SHROUD
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_shroud
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Angular Velocity = rotatingspeed
+        Option = Rotating
+        AXIS DEFINITION: 
+          Option = Coordinate Axis
+          Rotation Axis = Coord 0.3
+        END # AXIS DEFINITION:
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 0 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = None
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = SST
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Automatic
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command=">delete /FLOW:Flow Analysis 1/DOMAIN:Default Domain")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: volute_outlet
+      Boundary Type = OUTLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = OUTFLOW
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = Flowrate
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:volute_outlet
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: volute_outlet
+      Boundary Type = OUTLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = OUTFLOW
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = Flowrate
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:volute_outlet
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command=">delete /FLOW:Flow Analysis 1/DOMAIN:a_suction")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: suction_inlet
+      Boundary Type = INLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = INFLOW
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Stationary Frame Total Pressure
+          Relative Pressure = 1 [atm]
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:suction_inlet
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: suction_inlet
+      Boundary Type = INLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = INFLOW
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Stationary Frame Total Pressure
+          Relative Pressure = 1 [atm]
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Low Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:suction_inlet
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: suction_inlet
+      Boundary Type = INLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = INFLOW
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Stationary Frame Total Pressure
+          Relative Pressure = 1 [atm]
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Low Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:suction_inlet
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command=">delete /FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_impeller_hub Side 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_impeller_hub Side 2 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_impeller_radial Side 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_impeller_radial Side 2 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_impeller_shroud Side 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_impeller_shroud Side 2 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_volute Side 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_clearance_volute Side 2,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_suction_clearance Side 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_suction_clearance Side 2,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_suction_impeller Side 1,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:if_suction_impeller Side 2 1")
+setup1.SendCommand(Command=">delete /FLOW:Flow Analysis 1/DOMAIN INTERFACE:if_clearance_impeller_hub,/FLOW:Flow Analysis 1/DOMAIN INTERFACE:if_clearance_impeller_radial,/FLOW:Flow Analysis 1/DOMAIN INTERFACE:if_clearance_impeller_shroud,/FLOW:Flow Analysis 1/DOMAIN INTERFACE:if_clearance_volute,/FLOW:Flow Analysis 1/DOMAIN INTERFACE:if_suction_clearance,/FLOW:Flow Analysis 1/DOMAIN INTERFACE:if_suction_impeller")
+setup1.SendCommand(Command=">delete /FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:impeller_blade02,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:impeller_blade03,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:impeller_blade04,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:impeller_blade05,/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:impeller_blade06")
+setup1.SendCommand(Command=">rename from=/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:impeller_blade01,to=impeller_blade")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: impeller_blade
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = BLADE
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: impeller_hub
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = HUB
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_hub
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+  DOMAIN: c_impeller
+&replace     BOUNDARY: impeller_shroud
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = SHROUD
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_shroud
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN INTERFACE: periodicinterface
+    Boundary List1 = 
+    Boundary List2 = 
+    Filter Domain List1 = c_impeller
+    Filter Domain List2 = c_impeller
+    Interface Region List1 = PER1
+    Interface Region List2 = PER2
+    Interface Type = Fluid Fluid
+    INTERFACE MODELS: 
+      Option = Rotational Periodicity
+      AXIS DEFINITION: 
+        Option = Coordinate Axis
+        Rotation Axis = Coord 0.3
+      END # AXIS DEFINITION:
+    END # INTERFACE MODELS:
+    MESH CONNECTION: 
+      Option = Automatic
+    END # MESH CONNECTION:
+  END # DOMAIN INTERFACE:periodicinterface
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0.0158855, 0.0379138, -0.0164932
+    Scale = 17.379
+    Pan = -0.0207432, 0.0130729
+    Rotation Quaternion = 0.136649, 0.957914, 0.133152, -0.214429
+    
+  END
+
+END
+
+> update
+PRIMITIVE2D:INFLOW Passage
+  Prim2d Visibility = True
+END""")
+setup1.SendCommand(Command="""PRIMITIVE2D:INFLOW Passage
+  Prim2d Visibility = True
+END""")
+setup1.SendCommand(Command=">rename from=/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:suction_inlet,to=impeller_inlet")
+setup1.SendCommand(Command="""PRIMITIVE2D:OUTFLOW Passage
+  Prim2d Visibility = True
+END""")
+setup1.SendCommand(Command="""PRIMITIVE2D:OUTFLOW Passage
+  Prim2d Visibility = True
+END""")
+setup1.SendCommand(Command=">rename from=/FLOW:Flow Analysis 1/DOMAIN:c_impeller/BOUNDARY:volute_outlet,to=impeller_outlet")
+setup1.SendCommand(Command="""LIBRARY:
+CEL:
+EXPRESSIONS:
+Flowrate=1.0*Q*waterdensity/6
+END
+END
+END""")
+setup1.SendCommand(Command="""LIBRARY:
+CEL:
+EXPRESSIONS:
+Flowrate=1.0*Q*waterdensity/6
+END
+END
+END""")
+setup1.SendCommand(Command="""LIBRARY:
+CEL:
+EXPRESSIONS:
+headpump=(massFlowAve(Total Pressure in Rel Frame )@impeller_outlet - massFlowAve(Total Pressure in Rel Frame )@impeller_inlet )/g /waterdensity
+END
+END
+END""")
+setup1.SendCommand(Command="""LIBRARY:
+CEL:
+EXPRESSIONS:
+powerhydraulic=g*headpump*massFlow()@impeller_inlet
+END
+END
+END""")
+setup1.SendCommand(Command="""LIBRARY:
+CEL:
+EXPRESSIONS:
+powerhydraulic=g*headpump*massFlow()@impeller_inlet
+END
+END
+END""")
+setup1.SendCommand(Command="""LIBRARY:
+CEL:
+EXPRESSIONS:
+torqueimpeller=torque_z()@impeller_blade+torque_z()@impeller_shroud+torque_z()@impeller_hub
+END
+END
+END""")
+Save(Overwrite=True)
+fileReference1 = GetFileReference(Name="F8")
+SetFileDeletable(
+    File=fileReference1,
+    IsDeletable=True)
+fileReference1.Unregister(
+    DeleteFileIfNonShared="False",
+    BackUp=False)
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0.0158855, 0.0379138, -0.0164932
+    Scale = 17.3997
+    Pan = -0.0207432, 0.0130729
+    Rotation Quaternion = 0.136649, 0.957914, 0.133152, -0.214429
+    
+  END
+
+END
+
+> update
+>delete /SIMULATION CONTROL/EXECUTION CONTROL""")
+Save(Overwrite=True)
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   DOMAIN: c_impeller
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = Passage Main
+    BOUNDARY: impeller_blade
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = BLADE
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_blade
+    BOUNDARY: impeller_hub
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = HUB
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_hub
+    BOUNDARY: impeller_inlet
+      Boundary Type = INLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = INFLOW
+      BOUNDARY CONDITIONS: 
+        FLOW DIRECTION: 
+          Option = Normal to Boundary Condition
+        END # FLOW DIRECTION:
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Option = Stationary Frame Total Pressure
+          Relative Pressure = 1 [atm]
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Low Intensity and Eddy Viscosity Ratio
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_inlet
+    BOUNDARY: impeller_outlet
+      Boundary Type = OUTLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = OUTFLOW
+      BOUNDARY CONDITIONS: 
+        FLOW REGIME: 
+          Option = Subsonic
+        END # FLOW REGIME:
+        MASS AND MOMENTUM: 
+          Mass Flow Rate = Flowrate
+          Mass Flow Rate Area = As Specified
+          Option = Mass Flow Rate
+        END # MASS AND MOMENTUM:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_outlet
+    BOUNDARY: impeller_shroud
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = SHROUD
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = No Slip Wall
+        END # MASS AND MOMENTUM:
+        WALL ROUGHNESS: 
+          Option = Smooth Wall
+        END # WALL ROUGHNESS:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:impeller_shroud
+    BOUNDARY: periodicinterface Side 1
+      Boundary Type = INTERFACE
+      Interface Boundary = On
+      Location = PER1
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = Conservative Interface Flux
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Conservative Interface Flux
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:periodicinterface Side 1
+    BOUNDARY: periodicinterface Side 2
+      Boundary Type = INTERFACE
+      Interface Boundary = On
+      Location = PER2
+      BOUNDARY CONDITIONS: 
+        MASS AND MOMENTUM: 
+          Option = Conservative Interface Flux
+        END # MASS AND MOMENTUM:
+        TURBULENCE: 
+          Option = Conservative Interface Flux
+        END # TURBULENCE:
+      END # BOUNDARY CONDITIONS:
+    END # BOUNDARY:periodicinterface Side 2
+    DOMAIN MODELS: 
+      BUOYANCY MODEL: 
+        Option = Non Buoyant
+      END # BUOYANCY MODEL:
+      DOMAIN MOTION: 
+        Angular Velocity = rotatingspeed
+        Option = Rotating
+        AXIS DEFINITION: 
+          Option = Coordinate Axis
+          Rotation Axis = Coord 0.3
+        END # AXIS DEFINITION:
+      END # DOMAIN MOTION:
+      MESH DEFORMATION: 
+        Option = None
+      END # MESH DEFORMATION:
+      REFERENCE PRESSURE: 
+        Reference Pressure = 0 [atm]
+      END # REFERENCE PRESSURE:
+    END # DOMAIN MODELS:
+    FLUID DEFINITION: Fluid 1
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY: 
+        Option = Continuous Fluid
+      END # MORPHOLOGY:
+    END # FLUID DEFINITION:Fluid 1
+    FLUID MODELS: 
+      COMBUSTION MODEL: 
+        Option = None
+      END # COMBUSTION MODEL:
+      HEAT TRANSFER MODEL: 
+        Option = None
+      END # HEAT TRANSFER MODEL:
+      THERMAL RADIATION MODEL: 
+        Option = None
+      END # THERMAL RADIATION MODEL:
+      TURBULENCE MODEL: 
+        Option = SST
+      END # TURBULENCE MODEL:
+      TURBULENT WALL FUNCTIONS: 
+        Option = Automatic
+      END # TURBULENT WALL FUNCTIONS:
+    END # FLUID MODELS:
+  END # DOMAIN:c_impeller
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.Exit()
+Save(Overwrite=True)
