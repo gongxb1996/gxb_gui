@@ -1,10 +1,9 @@
 # -*- coding:utf-8 -*-
-import sys
+import sys,os
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 import numpy as np
 import pandas as pd
-import os
 from objective_function import objective_pump
 from write_excel import write_results_excel
 from pyDOE2 import lhs
@@ -22,7 +21,7 @@ class TestWindow(QWidget):
         self.formlayout = QGridLayout()
         self.core = QComboBox()
         self.lab0 = QLabel('请选择Cores')
-        self.core.addItems(['1','2','3','4','5','6','7','8'])
+        self.core.addItems(['','1','2','3','4','5','6','7','8'])
 
         self.cb1 = QComboBox()
         self.lab1 = QLabel('请选择Target')
@@ -42,15 +41,25 @@ class TestWindow(QWidget):
         self.lab4 = QLabel('请选择AI')
         self.cb4.addItems(['','PSO','GSA','GA','BA','ABC'])
 
-        self.formlayout.addWidget(self.lab1, 0, 0)
-        self.formlayout.addWidget(self.cb1, 0, 1)
-        self.formlayout.addWidget(self.lab2, 1, 0)
-        self.formlayout.addWidget(self.cb2, 1, 1)
-        self.formlayout.addWidget(self.lab3, 2, 0)
-        self.formlayout.addWidget(self.cb3, 2, 1)
-        self.formlayout.addWidget(self.lab4, 3, 0)
-        self.formlayout.addWidget(self.cb4, 3, 1)
+        hbox = QHBoxLayout()
+        self.okbtn = QPushButton('确定')
+        self.cancelbtn = QPushButton('取消')
+        hbox.addWidget(self.okbtn)
+        hbox.addWidget(self.cancelbtn)
+        self.cancelbtn.clicked.connect(self.close)
 
+        self.formlayout.addWidget(self.lab0, 0, 0)
+        self.formlayout.addWidget(self.core, 0, 1)
+        self.formlayout.addWidget(self.lab1, 1, 0)
+        self.formlayout.addWidget(self.cb1,  1, 1)
+        self.formlayout.addWidget(self.lab2, 2, 0)
+        self.formlayout.addWidget(self.cb2,  2, 1)
+        self.formlayout.addWidget(self.lab3, 3, 0)
+        self.formlayout.addWidget(self.cb3,  3, 1)
+        self.formlayout.addWidget(self.lab4, 4, 0)
+        self.formlayout.addWidget(self.cb4,  4, 1)
+
+        self.formlayout.addItem(hbox,5,1)
         self.setLayout(self.formlayout)
 
     def center(self):
@@ -207,7 +216,7 @@ class TestWindow(QWidget):
                 echo = 'on'
                 if self.cb4.currentText() == 'PSO':
                     from pso_algorithm import pso
-                    [xgbest, fgbest, fbest] = pso(f_objective, numpop, functiondim, lb, ub, numiter, echo)
+                    xgbest, fgbest, fbest = pso(f_objective, numpop, functiondim, lb, ub, numiter, echo)
                 '''
                 elif self.cb4.currentText() == 'GSA':
                     from gsa_algorithm import gsa

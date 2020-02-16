@@ -9,7 +9,7 @@ import pandas as pd
 import os
 from objective_function import objective_pump
 from write_excel import write_results_excel
-from pyDOE import lhs
+from pyDOE2 import lhs
 
 pathfile_bladegen = 'D:\\Program Files\\ANSYS Inc\\v180\\aisol\\BladeModeler\\BladeGen'
 pathfile_cfturbo = 'C:\\Program Files\\CFturbo 10.3\\cfturbo.exe'

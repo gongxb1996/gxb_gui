@@ -41,44 +41,35 @@ class OpenWindow(QMainWindow):
         dialog.setFilter(QDir.Files)
         if dialog.exec():
             filename = dialog.selectedFiles()
-            f = open(filename[0], encoding='utf-8', mode='r+')
-            with f:
+            with open(filename[0], encoding='utf-8', mode='r+') as f:
                 data = f.read()
                 self.opentext.setText(data)
-
-
-    def saveDialog(self):
-        dialog = QDialog()
-        dialog.setWindowTitle('保存提醒')
-        dialog.setGeometry(400,300,50,50)
-        layout = QVBoxLayout()
-        hbox = QHBoxLayout()
-        btn1 = QPushButton('保存')
-        btn2 = QPushButton('不保存')
-        btn3 = QPushButton('取消')
-        hbox.addWidget(btn1)
-        hbox.addWidget(btn2)
-        hbox.addWidget(btn3)
-
-        label = QLabel('是否要保存文件')
-        layout.addWidget(label)
-        layout.addLayout(hbox)
-        dialog.setLayout(layout)
-        btn1.clicked.connect(self.saveItem)
-        btn2.clicked.connect(dialog.close)
-        btn3.clicked.connect(dialog.close)
-        # 设置模式状态，除非关闭对话框，否则原窗口无法使用
-        dialog.setWindowModality(Qt.ApplicationModal)
-        dialog.exec()
+                f.close()
+    # 窗口关闭保存事件
+    def closeEvent(self, QCloseEvent):
+        res = QMessageBox.question(self, '保存提醒', '是否保存文件？',
+                                   QMessageBox.Yes | QMessageBox.No|QMessageBox.Cancel,QMessageBox.Yes)
+        if res == QMessageBox.Yes:
+            savedialog1 = QFileDialog()
+            savedialog1.setWindowTitle('保存文件')
+            fname = savedialog1.getSaveFileName(self, '保存文件', '../', '文本文件(*.txt )')
+            with open(fname[0], 'w') as f:
+                my_text = self.opentext.toPlainText()
+                f.write(my_text)
+                f.close()
+                QCloseEvent.ignore()
+        elif res == QMessageBox.No:
+            self.close()
+        elif res == QMessageBox.Cancel:
+            QCloseEvent.ignore()
     def saveItem(self):
         savedialog = QFileDialog()
         savedialog.setWindowTitle('保存文件')
         fname = savedialog.getSaveFileName(self, '保存文件', '../', '文本文件(*.txt )')
-        if savedialog.exec():
-            with open(fname[0], 'w') as f:
-                my_text = self.opentext.toPlainText()
-                f.write(my_text)
-
+        with open(fname[0], 'w') as f:
+            my_text = self.opentext.toPlainText()
+            f.write(my_text)
+            f.close()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
